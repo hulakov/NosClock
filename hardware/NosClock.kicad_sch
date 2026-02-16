@@ -1633,6 +1633,18 @@
 		(uuid "66fcc564-0b93-426f-ab35-3e7db716d1b2")
 	)
 	(junction
+		(at 186.69 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "456913b7-7b28-44f3-beec-a52452ea6325")
+	)
+	(junction
+		(at 95.25 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "490df858-1895-49a1-b451-20f4f7eb0588")
+	)
+	(junction
 		(at 72.39 167.64)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1662,6 +1674,12 @@
 		(color 0 0 0 0)
 		(uuid "e669a299-3db8-4ca2-9b53-cf6a3eaa434b")
 	)
+	(junction
+		(at 109.22 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ee817c0a-7104-4eb8-8f60-628f36798770")
+	)
 	(no_connect
 		(at 196.85 46.99)
 		(uuid "fa8fdcfd-2b1c-42ab-aed4-63af6e750505")
@@ -1688,7 +1706,7 @@
 	)
 	(wire
 		(pts
-			(xy 166.37 111.76) (xy 204.47 111.76)
+			(xy 166.37 111.76) (xy 186.69 111.76)
 		)
 		(stroke
 			(width 0)
@@ -1785,6 +1803,16 @@
 			(type default)
 		)
 		(uuid "30a8bc3f-a7b9-4c8b-83cc-83451ea1dd21")
+	)
+	(wire
+		(pts
+			(xy 109.22 106.68) (xy 109.22 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33910f81-4236-405b-aa30-53604818a04b")
 	)
 	(wire
 		(pts
@@ -1908,6 +1936,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 111.76) (xy 109.22 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57f118c4-eb70-47f0-ada5-52407a1c73e8")
+	)
+	(wire
+		(pts
 			(xy 162.56 52.07) (xy 173.99 52.07)
 		)
 		(stroke
@@ -1955,16 +1993,6 @@
 			(type default)
 		)
 		(uuid "6e3de0a0-6913-4f84-9d4b-79a1de89fdfe")
-	)
-	(wire
-		(pts
-			(xy 111.76 127) (xy 121.92 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "73e9d4df-1937-4b04-a675-b733f5fb4226")
 	)
 	(wire
 		(pts
@@ -2028,23 +2056,23 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 120.65) (xy 115.57 91.44)
+			(xy 95.25 116.84) (xy 119.38 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e5e226f-252b-437f-9c2b-aecf037b48c9")
+	)
+	(wire
+		(pts
+			(xy 95.25 116.84) (xy 95.25 91.44)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "89da700f-81a7-4b95-984a-7a427b433645")
-	)
-	(wire
-		(pts
-			(xy 121.92 120.65) (xy 115.57 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9194361b-c573-409f-98c1-4d2e28ae2342")
 	)
 	(wire
 		(pts
@@ -2058,7 +2086,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 91.44) (xy 133.35 91.44)
+			(xy 95.25 91.44) (xy 133.35 91.44)
 		)
 		(stroke
 			(width 0)
@@ -2088,6 +2116,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 102.87) (xy 186.69 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7099e7f-518e-4e7c-9171-1ee71f74a5e3")
+	)
+	(wire
+		(pts
 			(xy 204.47 111.76) (xy 204.47 88.9)
 		)
 		(stroke
@@ -2105,6 +2143,16 @@
 			(type default)
 		)
 		(uuid "aeea7215-077f-4f05-8a6f-a92ad4b23847")
+	)
+	(wire
+		(pts
+			(xy 109.22 111.76) (xy 119.38 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0d209c9-06c0-4a2c-83e4-acae707fa296")
 	)
 	(wire
 		(pts
@@ -2208,6 +2256,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 111.76) (xy 204.47 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e84e8106-dea8-45d8-a1a7-5fa90782b65a")
+	)
+	(wire
+		(pts
 			(xy 156.21 31.75) (xy 158.75 31.75)
 		)
 		(stroke
@@ -2236,7 +2294,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "022306eb-9ffb-43f7-a359-f69bb3a29757")
-		(property "Reference" "TP102"
+		(property "Reference" "TP105"
 			(at 95.758 46.99 90)
 			(effects
 				(font
@@ -2285,7 +2343,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "TP102")
+					(reference "TP105")
 					(unit 1)
 				)
 			)
@@ -2301,7 +2359,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "15a408b0-629a-43a1-9403-0648029ee0f7")
-		(property "Reference" "#PWR0118"
+		(property "Reference" "#PWR0103"
 			(at 91.44 181.61 0)
 			(effects
 				(font
@@ -2351,7 +2409,74 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#PWR0118")
+					(reference "#PWR0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 95.25 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "20f807c5-a29c-4c7e-9227-0a29681000c3")
+		(property "Reference" "TP104"
+			(at 97.79 86.8679 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.79 89.4079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 100.33 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 100.33 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 95.25 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6d3ba055-43fb-44b7-bc81-f9cc3848972d")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
+					(reference "TP104")
 					(unit 1)
 				)
 			)
@@ -2432,7 +2557,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "39be2883-f636-457e-bb28-731fe10086d9")
-		(property "Reference" "#PWR0101"
+		(property "Reference" "#PWR0106"
 			(at 133.35 25.4 0)
 			(effects
 				(font
@@ -2482,7 +2607,73 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#PWR0101")
+					(reference "#PWR0106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 186.69 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "51dc9f9b-f17e-4370-a530-930fa7373a00")
+		(property "Reference" "TP108"
+			(at 187.96 98.298 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "170V"
+			(at 187.96 100.838 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 191.77 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 186.69 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f4d78e38-51e6-4482-a884-10f65e38979b")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
+					(reference "TP108")
 					(unit 1)
 				)
 			)
@@ -2498,7 +2689,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "64ce8443-cce7-435d-bfdb-0194bedea639")
-		(property "Reference" "C103"
+		(property "Reference" "C101"
 			(at 76.2 160.4009 0)
 			(effects
 				(font
@@ -2552,7 +2743,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "C103")
+					(reference "C101")
 					(unit 1)
 				)
 			)
@@ -2568,7 +2759,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8c91f5e0-4d0d-49d9-be49-451f665ba6bc")
-		(property "Reference" "U102"
+		(property "Reference" "U101"
 			(at 60.96 147.32 0)
 			(effects
 				(font
@@ -2623,7 +2814,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "U102")
+					(reference "U101")
 					(unit 1)
 				)
 			)
@@ -2738,7 +2929,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9837a5ca-7fd6-4f23-b288-24550ad24694")
-		(property "Reference" "TP101"
+		(property "Reference" "TP106"
 			(at 100.838 41.91 90)
 			(effects
 				(font
@@ -2787,7 +2978,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "TP101")
+					(reference "TP106")
 					(unit 1)
 				)
 			)
@@ -2803,7 +2994,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9bc4404f-b913-4fc6-bae9-f088cfb72f51")
-		(property "Reference" "#PWR0110"
+		(property "Reference" "#PWR0104"
 			(at 91.44 153.67 0)
 			(effects
 				(font
@@ -2854,7 +3045,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#PWR0110")
+					(reference "#PWR0104")
 					(unit 1)
 				)
 			)
@@ -2870,7 +3061,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9c9f7474-9ef9-4078-afef-13085ff6141d")
-		(property "Reference" "#PWR0108"
+		(property "Reference" "#PWR0101"
 			(at 43.18 153.67 0)
 			(effects
 				(font
@@ -2920,7 +3111,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#PWR0108")
+					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -2928,7 +3119,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 111.76 127 90)
+		(at 104.14 111.76 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2936,8 +3127,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9e50c1e5-f256-4e64-9c7b-cbc4374f798c")
-		(property "Reference" "#PWR0103"
-			(at 115.57 127 0)
+		(property "Reference" "#PWR0105"
+			(at 107.95 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2946,7 +3137,7 @@
 			)
 		)
 		(property "Value" "12V"
-			(at 110.49 124.46 90)
+			(at 102.87 109.22 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2954,7 +3145,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 127 0)
+			(at 104.14 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2963,7 +3154,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 127 0)
+			(at 104.14 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2972,7 +3163,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 111.76 127 0)
+			(at 104.14 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2986,7 +3177,74 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#PWR0103")
+					(reference "#PWR0105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 109.22 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e178c841-aea5-4de7-b51e-0a0ea6584488")
+		(property "Reference" "TP107"
+			(at 111.76 102.1079 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "12V"
+			(at 111.76 104.6479 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_3.0x3.0mm"
+			(at 114.3 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 109.22 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5e914f9-2ff1-425e-b356-9c911f05b7d4")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
+					(reference "TP107")
 					(unit 1)
 				)
 			)
@@ -3002,7 +3260,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f67cff8e-2ca9-4cbe-869b-9d29037536ff")
-		(property "Reference" "TP104"
+		(property "Reference" "TP101"
 			(at 85.598 57.15 90)
 			(effects
 				(font
@@ -3051,7 +3309,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "TP104")
+					(reference "TP101")
 					(unit 1)
 				)
 			)
@@ -3137,7 +3395,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f7b94a72-9471-424d-95d3-35caff6b332a")
-		(property "Reference" "U101"
+		(property "Reference" "U102"
 			(at 135.4933 21.59 0)
 			(effects
 				(font
@@ -3233,7 +3491,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "U101")
+					(reference "U102")
 					(unit 1)
 				)
 			)
@@ -3249,7 +3507,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f878f162-52ef-43a7-98f9-4142463d37c8")
-		(property "Reference" "#PWR0112"
+		(property "Reference" "#PWR0102"
 			(at 60.96 181.61 0)
 			(effects
 				(font
@@ -3299,7 +3557,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#PWR0112")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
@@ -3315,7 +3573,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fe44f115-8798-4d86-a408-d2d9360b6d81")
-		(property "Reference" "TP105"
+		(property "Reference" "TP102"
 			(at 97.79 142.2399 90)
 			(effects
 				(font
@@ -3366,15 +3624,15 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "TP105")
+					(reference "TP102")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(sheet
-		(at 233.68 105.41)
-		(size 29.21 17.78)
+		(at 119.38 104.14)
+		(size 46.99 20.32)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -3387,9 +3645,9 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "5a175a2d-a892-429a-8a38-ad45bc3e14a1")
-		(property "Sheetname" "MC34063A"
-			(at 233.68 104.6984 0)
+		(uuid "d05e6a5c-9ec2-4dd0-8405-1e4b63289adc")
+		(property "Sheetname" "UC3843"
+			(at 119.38 103.4284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3397,8 +3655,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "MC34063A.kicad_sch"
-			(at 233.68 123.7746 0)
+		(property "Sheetfile" "UC3843.kicad_sch"
+			(at 119.38 125.0446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3406,51 +3664,19 @@
 				(justify left top)
 			)
 		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 121.92 105.41)
-		(size 44.45 26.67)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "f9795d03-b6f4-4856-b4a1-9d9e4216b2f6")
-		(property "Sheetname" "MAX1771"
-			(at 121.92 104.6984 0)
+		(pin "12V" input
+			(at 119.38 111.76 180)
+			(uuid "23750368-e24f-4618-93ff-201a51a10a99")
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "MAX1771.kicad_sch"
-			(at 121.92 132.6646 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
+				(justify left)
 			)
 		)
 		(pin "170V" input
 			(at 166.37 111.76 0)
-			(uuid "5d5eccf5-47d7-4420-9bb4-199a7a751477")
+			(uuid "f42d3d0f-a701-4a28-ae93-e7c33272725e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3458,29 +3684,9 @@
 				(justify right)
 			)
 		)
-		(pin "PWM" input
-			(at 121.92 114.3 180)
-			(uuid "d2c19423-4eea-46c4-9584-5e082429685e")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
 		(pin "PWR_GND" input
-			(at 121.92 120.65 180)
-			(uuid "73980c8a-4086-49d2-b0a2-4fd5f1c3a450")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "12V" input
-			(at 121.92 127 180)
-			(uuid "7964f8ba-03da-4d96-b5e4-d870e70fb46f")
+			(at 119.38 116.84 180)
+			(uuid "e4c83a5f-8d2a-448a-9c98-6bf23318d81d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3491,7 +3697,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(page "3")
+					(page "4")
 				)
 			)
 		)
