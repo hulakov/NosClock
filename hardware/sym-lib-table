@@ -2,4 +2,6 @@
   (version 7)
   (lib (name "NosLib")(type "KiCad")(uri "${KIPRJMOD}/NosLib.kicad_sym")(options "")(descr ""))
   (lib (name "nixies-us")(type "EAGLE")(uri "${KIPRJMOD}/3rdparty/Eagle-and-KiCAD-Nixie-Libs/nixies-us.lbr")(options "")(descr ""))
+  (lib (name "mynixies")(type "Legacy")(uri "${KIPRJMOD}/3rdparty/Eagle-and-KiCAD-Nixie-Libs/mynixies.lib")(options "")(descr ""))
+  (lib (name "nixiemisc")(type "Legacy")(uri "${KIPRJMOD}/3rdparty/Eagle-and-KiCAD-Nixie-Libs/nixiemisc.lib")(options "")(descr ""))
 )
