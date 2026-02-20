@@ -1153,7 +1153,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02a9dde0-1f95-495b-b885-3dcfdfb5a370")
-		(property "Reference" "#PWR0304"
+		(property "Reference" "#PWR?"
 			(at 125.73 91.44 0)
 			(effects
 				(font
@@ -1207,6 +1207,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1219,7 +1225,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1b38ac04-8728-4509-91fd-85ab222e2763")
-		(property "Reference" "D301"
+		(property "Reference" "D?"
 			(at 62.23 67.31 0)
 			(effects
 				(font
@@ -1293,6 +1299,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "D?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1305,7 +1317,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33c344c6-993f-4f79-9826-b42653b9bf08")
-		(property "Reference" "C301"
+		(property "Reference" "C?"
 			(at 72.39 82.1689 0)
 			(effects
 				(font
@@ -1363,6 +1375,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1375,7 +1393,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "47c54c74-4947-4499-90e1-1ad4f33fab58")
-		(property "Reference" "C303"
+		(property "Reference" "C?"
 			(at 129.54 80.0099 0)
 			(effects
 				(font
@@ -1433,6 +1451,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1445,7 +1469,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4d3d303f-43fb-4542-9480-2ee579b64834")
-		(property "Reference" "D302"
+		(property "Reference" "D?"
 			(at 113.03 95.1798 0)
 			(effects
 				(font
@@ -1509,6 +1533,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "D?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1521,7 +1551,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6eed12e6-7c71-4130-97d5-fa32e1c8de70")
-		(property "Reference" "#PWR0303"
+		(property "Reference" "#PWR?"
 			(at 100.33 115.57 0)
 			(effects
 				(font
@@ -1575,6 +1605,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1587,7 +1623,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "78187a91-df7e-4c63-b39c-66a7cf13b4fe")
-		(property "Reference" "#PWR0305"
+		(property "Reference" "#PWR?"
 			(at 147.32 115.57 0)
 			(effects
 				(font
@@ -1641,6 +1677,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1653,7 +1695,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8532fd0f-b666-4537-81f4-ffcfbeca20d9")
-		(property "Reference" "#PWR0302"
+		(property "Reference" "#PWR?"
 			(at 87.63 92.71 0)
 			(effects
 				(font
@@ -1707,6 +1749,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1719,7 +1767,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8535b19b-7105-4172-b5fe-de4b4011254a")
-		(property "Reference" "R301"
+		(property "Reference" "R?"
 			(at 63.5 95.25 90)
 			(effects
 				(font
@@ -1775,6 +1823,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "R?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1787,7 +1841,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d203138a-a58a-4ee3-9a8b-f608c0ef9be3")
-		(property "Reference" "#PWR0301"
+		(property "Reference" "#PWR?"
 			(at 68.58 92.71 0)
 			(effects
 				(font
@@ -1841,6 +1895,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "#PWR?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1853,7 +1913,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d602a43d-e874-461f-ad08-03ab3cdfe298")
-		(property "Reference" "C302"
+		(property "Reference" "C?"
 			(at 91.44 81.2799 0)
 			(effects
 				(font
@@ -1871,7 +1931,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 88.5952 86.36 0)
 			(effects
 				(font
@@ -1911,6 +1971,12 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "C?")
+					(unit 1)
+				)
+			)
 		)
 	)
 	(symbol
@@ -1923,7 +1989,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ec921c81-cced-4fc3-8050-36e76461ceed")
-		(property "Reference" "D303"
+		(property "Reference" "D?"
 			(at 160.02 95.1798 0)
 			(effects
 				(font
@@ -1987,6 +2053,18 @@
 					(unit 1)
 				)
 			)
+			(project "SK6812"
+				(path "/d3b49bbc-89fa-4807-b130-f75fd2d42899"
+					(reference "D?")
+					(unit 1)
+				)
+			)
 		)
 	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
 )

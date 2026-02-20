@@ -189,8 +189,8 @@
       "track_widths": [
         0.0,
         0.22,
-        0.6,
-        1.5
+        0.5,
+        1.0
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -454,7 +454,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -501,27 +501,25 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.2,
-        "line_style": 0,
-        "name": "PWR",
-        "pcb_color": "rgb(255, 12, 14)",
-        "priority": 1,
-        "schematic_color": "rgb(255, 6, 4)",
-        "track_width": 0.6,
-        "via_diameter": 0.7,
-        "via_drill": 0.3,
-        "wire_width": 9
+        "clearance": 0.6,
+        "name": "HI_PWR",
+        "pcb_color": "rgb(44, 9, 255)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       },
       {
-        "clearance": 0.2,
+        "clearance": 0.6,
         "line_style": 0,
-        "name": "Shunt",
-        "pcb_color": "rgb(255, 160, 16)",
-        "priority": 0,
-        "schematic_color": "rgb(172, 168, 255)",
-        "track_width": 1.5,
-        "via_diameter": 1.2,
-        "via_drill": 0.6,
+        "name": "PWR",
+        "pcb_color": "rgb(255, 6, 0)",
+        "priority": 1,
+        "schematic_color": "rgb(255, 10, 4)",
+        "track_width": 1.0,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 20
       },
       {
@@ -533,9 +531,10 @@
         "pcb_color": "rgb(19, 255, 63)",
         "priority": 2,
         "schematic_color": "rgb(0, 10, 255)",
-        "track_width": 0.25,
+        "track_width": 0.22,
         "via_diameter": 0.6,
-        "via_drill": 0.3
+        "via_drill": 0.3,
+        "wire_width": 20
       }
     ],
     "meta": {
@@ -550,47 +549,23 @@
       },
       {
         "netclass": "PWR",
-        "pattern": "*5V*"
+        "pattern": "+3V3"
       },
       {
         "netclass": "PWR",
-        "pattern": "*3V3*"
-      },
-      {
-        "netclass": "Shunt",
-        "pattern": "*SHUNT*"
+        "pattern": "+5V"
       },
       {
         "netclass": "PWR",
-        "pattern": "*PWR_GND*"
+        "pattern": "*/PWR_*"
       },
       {
         "netclass": "PWR",
-        "pattern": "*12V*"
+        "pattern": "+12V"
       },
       {
-        "netclass": "PWR",
-        "pattern": "/MP2307/SW"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/MC34063A/INDUCTOR_*"
-      },
-      {
-        "netclass": "PWR",
+        "netclass": "HI_PWR",
         "pattern": "+170V"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/MAX1771/170V"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/MAX1771/L_D"
-      },
-      {
-        "netclass": "PWR",
-        "pattern": "/MAX1771/SOURCE"
       }
     ]
   },
@@ -805,8 +780,24 @@
       "Root"
     ],
     [
+      "31d29dc2-1be5-4fff-a090-40c576d6c388",
+      "Digit1"
+    ],
+    [
+      "31d29dc2-1be5-4fff-a090-40c576d6c388",
+      "Digit1"
+    ],
+    [
       "977ef975-6815-4040-88d6-5a12ab150449",
       "MP2307"
+    ],
+    [
+      "ec4eb1fa-e200-4648-8322-8c00b13e0b4b",
+      "Digit2"
+    ],
+    [
+      "ec4eb1fa-e200-4648-8322-8c00b13e0b4b",
+      "Digit2"
     ],
     [
       "8ef51682-6928-4447-b545-210fc96c162e",
@@ -817,31 +808,19 @@
       "UC3843"
     ],
     [
-      "9f540dbd-71ad-44a8-8cc2-f58d8866b340",
+      "cbfce168-24b0-4ff9-a45f-71f9f499ca5c",
+      "Lamps"
+    ],
+    [
+      "8c8144ad-1314-40cc-a324-38b48d0ad2e8",
       "TwoDigits1"
     ],
     [
-      "ec4eb1fa-e200-4648-8322-8c00b13e0b4b",
-      "Digit2"
-    ],
-    [
-      "31d29dc2-1be5-4fff-a090-40c576d6c388",
-      "Digit1"
-    ],
-    [
-      "6202d247-2143-4df5-97f2-1e0a9caea067",
+      "815f772f-b9a3-4706-867b-0ad7c79a838f",
       "TwoDigits2"
     ],
     [
-      "ec4eb1fa-e200-4648-8322-8c00b13e0b4b",
-      "Digit2"
-    ],
-    [
-      "31d29dc2-1be5-4fff-a090-40c576d6c388",
-      "Digit1"
-    ],
-    [
-      "191378f7-3564-412d-a667-49326816a0d3",
+      "41a44531-a859-4f1e-a3f5-395e6f2ed512",
       "TwoDigits3"
     ],
     [
@@ -853,20 +832,20 @@
       "Digit1"
     ],
     [
-      "3a9033a2-ad6b-47b5-b58f-6cad105ebd2b",
+      "257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d",
       "Dots"
     ],
     [
       "421bee82-978c-476a-94d6-bf8206f0e4b7",
-      "Dot1"
+      "Dot3"
     ],
     [
       "522fdeef-dc62-4afe-b57c-5f13254d59d6",
-      "Dot2"
+      "Dot1"
     ],
     [
       "a4697648-e011-400b-85bc-c958e4340dd6",
-      "Dot3"
+      "Dot2"
     ],
     [
       "4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2",
