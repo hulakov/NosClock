@@ -190,6 +190,7 @@
         0.0,
         0.22,
         0.5,
+        0.6,
         1.0
       ],
       "tuning_pattern_settings": {
@@ -501,21 +502,11 @@
         "wire_width": 6
       },
       {
-        "clearance": 0.6,
-        "name": "HI_PWR",
-        "pcb_color": "rgb(44, 9, 255)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
-        "via_diameter": 0.6,
-        "via_drill": 0.3
-      },
-      {
-        "clearance": 0.6,
+        "clearance": 0.35,
         "line_style": 0,
         "name": "PWR",
         "pcb_color": "rgb(255, 6, 0)",
-        "priority": 1,
+        "priority": 0,
         "schematic_color": "rgb(255, 10, 4)",
         "track_width": 1.0,
         "via_diameter": 0.6,
@@ -529,7 +520,7 @@
         "line_style": 3,
         "name": "USB Data",
         "pcb_color": "rgb(19, 255, 63)",
-        "priority": 2,
+        "priority": 1,
         "schematic_color": "rgb(0, 10, 255)",
         "track_width": 0.22,
         "via_diameter": 0.6,
@@ -549,11 +540,11 @@
       },
       {
         "netclass": "PWR",
-        "pattern": "+3V3"
+        "pattern": "*/+3V3"
       },
       {
         "netclass": "PWR",
-        "pattern": "+5V"
+        "pattern": "*/+5V"
       },
       {
         "netclass": "PWR",
@@ -561,11 +552,11 @@
       },
       {
         "netclass": "PWR",
-        "pattern": "+12V"
+        "pattern": "*/+12V"
       },
       {
-        "netclass": "HI_PWR",
-        "pattern": "+170V"
+        "netclass": "PWR",
+        "pattern": "*/+170V"
       }
     ]
   },
@@ -780,28 +771,8 @@
       "Root"
     ],
     [
-      "31d29dc2-1be5-4fff-a090-40c576d6c388",
-      "Digit1"
-    ],
-    [
-      "31d29dc2-1be5-4fff-a090-40c576d6c388",
-      "Digit1"
-    ],
-    [
       "977ef975-6815-4040-88d6-5a12ab150449",
       "MP2307"
-    ],
-    [
-      "ec4eb1fa-e200-4648-8322-8c00b13e0b4b",
-      "Digit2"
-    ],
-    [
-      "ec4eb1fa-e200-4648-8322-8c00b13e0b4b",
-      "Digit2"
-    ],
-    [
-      "8ef51682-6928-4447-b545-210fc96c162e",
-      "LDO"
     ],
     [
       "d05e6a5c-9ec2-4dd0-8405-1e4b63289adc",
@@ -812,44 +783,24 @@
       "Lamps"
     ],
     [
-      "8c8144ad-1314-40cc-a324-38b48d0ad2e8",
-      "TwoDigits1"
+      "be8b82a5-add1-4f70-b173-db026f30f284",
+      "ThreeDigits1"
     ],
     [
-      "815f772f-b9a3-4706-867b-0ad7c79a838f",
-      "TwoDigits2"
+      "70d9b1f2-b64f-4460-a66c-f36fd80d1cc8",
+      "ThreeDigits2"
     ],
     [
-      "41a44531-a859-4f1e-a3f5-395e6f2ed512",
-      "TwoDigits3"
+      "99ba67ee-e3d0-4e0a-b740-4da2fce5691d",
+      "HighSideSwitch1"
     ],
     [
-      "ec4eb1fa-e200-4648-8322-8c00b13e0b4b",
-      "Digit2"
+      "1c424bc5-98a3-4407-a843-d84953973710",
+      "HighSideSwitch2"
     ],
     [
-      "31d29dc2-1be5-4fff-a090-40c576d6c388",
-      "Digit1"
-    ],
-    [
-      "257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d",
-      "Dots"
-    ],
-    [
-      "421bee82-978c-476a-94d6-bf8206f0e4b7",
-      "Dot3"
-    ],
-    [
-      "522fdeef-dc62-4afe-b57c-5f13254d59d6",
-      "Dot1"
-    ],
-    [
-      "a4697648-e011-400b-85bc-c958e4340dd6",
-      "Dot2"
-    ],
-    [
-      "4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2",
-      "Dot4"
+      "39d58b35-aa77-439d-973f-4d49f0632d56",
+      "HighSideSwitch3"
     ]
   ],
   "text_variables": {}

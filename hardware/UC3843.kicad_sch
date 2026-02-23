@@ -2168,7 +2168,7 @@
 		)
 		(uuid "934943c7-03f7-4219-981c-d099c40ed6cd")
 	)
-	(hierarchical_label "12V"
+	(hierarchical_label "+12V"
 		(shape input)
 		(at 62.23 64.77 180)
 		(effects
@@ -2201,7 +2201,7 @@
 		)
 		(uuid "d986dcfd-10cc-4544-b984-35dc8790bb9c")
 	)
-	(hierarchical_label "170V"
+	(hierarchical_label "+170V"
 		(shape input)
 		(at 218.44 64.77 0)
 		(effects
@@ -2222,7 +2222,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0de2e29f-c1a3-4b5c-99eb-2d9a2c11179f")
-		(property "Reference" "#PWR0402"
+		(property "Reference" "#PWR0302"
 			(at 99.06 121.92 0)
 			(effects
 				(font
@@ -2272,7 +2272,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "#PWR0402")
+					(reference "#PWR0302")
 					(unit 1)
 				)
 			)
@@ -2288,7 +2288,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "188abad1-1e47-4b64-82c8-db64d4e0d0b3")
-		(property "Reference" "C403"
+		(property "Reference" "C306"
 			(at 102.87 106.6799 0)
 			(effects
 				(font
@@ -2423,7 +2423,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "C403")
+					(reference "C306")
 					(unit 1)
 				)
 			)
@@ -2439,7 +2439,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1fddc1bb-1877-482b-b53c-d264eef32b45")
-		(property "Reference" "Q401"
+		(property "Reference" "Q301"
 			(at 168.91 83.8199 0)
 			(effects
 				(font
@@ -2580,7 +2580,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "Q401")
+					(reference "Q301")
 					(unit 1)
 				)
 			)
@@ -2596,7 +2596,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "228e7579-15c7-4c20-bf7d-3b2cadbc913a")
-		(property "Reference" "C401"
+		(property "Reference" "C301"
 			(at 118.11 73.6599 0)
 			(effects
 				(font
@@ -2731,7 +2731,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "C401")
+					(reference "C301")
 					(unit 1)
 				)
 			)
@@ -2746,7 +2746,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "25a5c47a-8fc5-4e4c-b3cb-435109df4d4d")
-		(property "Reference" "NT403"
+		(property "Reference" "NT302"
 			(at 189.738 75.438 0)
 			(effects
 				(font
@@ -2798,7 +2798,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "NT403")
+					(reference "NT302")
 					(unit 1)
 				)
 			)
@@ -2813,7 +2813,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "291cfab1-9832-4484-80f9-dbf31b063d3e")
-		(property "Reference" "NT401"
+		(property "Reference" "NT301"
 			(at 132.588 67.31 90)
 			(effects
 				(font
@@ -2865,7 +2865,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "NT401")
+					(reference "NT301")
 					(unit 1)
 				)
 			)
@@ -2881,7 +2881,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "33c69105-ab4f-4fd8-8242-d75731a5504f")
-		(property "Reference" "R407"
+		(property "Reference" "R307"
 			(at 187.96 105.4099 0)
 			(effects
 				(font
@@ -3016,7 +3016,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "R407")
+					(reference "R307")
 					(unit 1)
 				)
 			)
@@ -3032,7 +3032,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3f908efa-e665-4399-8b39-d41a914e5218")
-		(property "Reference" "#PWR0405"
+		(property "Reference" "#PWR0305"
 			(at 185.42 121.92 0)
 			(effects
 				(font
@@ -3082,7 +3082,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "#PWR0405")
+					(reference "#PWR0305")
 					(unit 1)
 				)
 			)
@@ -3098,7 +3098,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "57b3415c-3925-4e3e-ac51-71bf837d0900")
-		(property "Reference" "L401"
+		(property "Reference" "L301"
 			(at 149.86 59.69 90)
 			(effects
 				(font
@@ -3231,7 +3231,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "L401")
+					(reference "L301")
 					(unit 1)
 				)
 			)
@@ -3246,7 +3246,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "59548a5d-07f8-4bbe-9780-0456b0606aeb")
-		(property "Reference" "R401"
+		(property "Reference" "R301"
 			(at 92.71 87.63 90)
 			(effects
 				(font
@@ -3381,7 +3381,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "R401")
+					(reference "R301")
 					(unit 1)
 				)
 			)
@@ -3397,7 +3397,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5adc078d-d79c-4baa-bdee-ee53b5111209")
-		(property "Reference" "D401"
+		(property "Reference" "D301"
 			(at 173.99 58.42 0)
 			(effects
 				(font
@@ -3548,7 +3548,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "D401")
+					(reference "D301")
 					(unit 1)
 				)
 			)
@@ -3563,7 +3563,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "61abf2c0-b4eb-453a-b2b7-ce6bab4d573c")
-		(property "Reference" "C402"
+		(property "Reference" "C302"
 			(at 92.964 72.898 90)
 			(effects
 				(font
@@ -3698,7 +3698,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "C402")
+					(reference "C302")
 					(unit 1)
 				)
 			)
@@ -3713,7 +3713,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "646a3476-34ff-4db9-ab3b-0dddd55d9689")
-		(property "Reference" "NT402"
+		(property "Reference" "NT303"
 			(at 160.782 99.568 0)
 			(effects
 				(font
@@ -3765,7 +3765,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "NT402")
+					(reference "NT303")
 					(unit 1)
 				)
 			)
@@ -3781,7 +3781,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6ccffd1a-e49f-463c-a700-039e8059971c")
-		(property "Reference" "#PWR0401"
+		(property "Reference" "#PWR0301"
 			(at 114.3 85.09 0)
 			(effects
 				(font
@@ -3831,7 +3831,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "#PWR0401")
+					(reference "#PWR0301")
 					(unit 1)
 				)
 			)
@@ -3847,7 +3847,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "788f53ca-cfdb-4fff-87c6-6d3592bb31c5")
-		(property "Reference" "C405"
+		(property "Reference" "C303"
 			(at 207.01 90.5509 0)
 			(effects
 				(font
@@ -3856,7 +3856,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF 250V"
+		(property "Value" "4.7uF 400V"
 			(at 207.01 93.0909 0)
 			(effects
 				(font
@@ -3982,7 +3982,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "C405")
+					(reference "C303")
 					(unit 1)
 				)
 			)
@@ -3998,7 +3998,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "789bfefb-682f-413c-bd2d-6e4898a4db8b")
-		(property "Reference" "#PWR0403"
+		(property "Reference" "#PWR0303"
 			(at 128.27 121.92 0)
 			(effects
 				(font
@@ -4048,7 +4048,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "#PWR0403")
+					(reference "#PWR0303")
 					(unit 1)
 				)
 			)
@@ -4064,7 +4064,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7bf8bb3b-f59e-4d23-9563-239cc1319994")
-		(property "Reference" "#PWR0404"
+		(property "Reference" "#PWR0304"
 			(at 144.78 121.92 0)
 			(effects
 				(font
@@ -4114,7 +4114,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "#PWR0404")
+					(reference "#PWR0304")
 					(unit 1)
 				)
 			)
@@ -4130,7 +4130,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8fc3f824-0318-4bd3-a5f9-28270f5d4352")
-		(property "Reference" "R402"
+		(property "Reference" "R305"
 			(at 101.6 96.5199 0)
 			(effects
 				(font
@@ -4265,7 +4265,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "R402")
+					(reference "R305")
 					(unit 1)
 				)
 			)
@@ -4280,7 +4280,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "941afaa0-e90a-424f-9b41-90d775879fca")
-		(property "Reference" "R403"
+		(property "Reference" "R304"
 			(at 152.908 90.424 90)
 			(effects
 				(font
@@ -4413,7 +4413,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "R403")
+					(reference "R304")
 					(unit 1)
 				)
 			)
@@ -4429,7 +4429,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "95d0813d-69ae-421c-be22-2dd7a850cae4")
-		(property "Reference" "R405"
+		(property "Reference" "R306"
 			(at 167.64 101.5999 0)
 			(effects
 				(font
@@ -4564,7 +4564,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "R405")
+					(reference "R306")
 					(unit 1)
 				)
 			)
@@ -4580,7 +4580,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b831f417-5a77-4ac2-9243-8e480665e694")
-		(property "Reference" "R404"
+		(property "Reference" "R302"
 			(at 153.67 78.74 90)
 			(effects
 				(font
@@ -4713,7 +4713,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "R404")
+					(reference "R302")
 					(unit 1)
 				)
 			)
@@ -4729,7 +4729,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bde80e25-b238-4619-96c6-25ed71dd8fb7")
-		(property "Reference" "C404"
+		(property "Reference" "C305"
 			(at 148.59 101.5999 0)
 			(effects
 				(font
@@ -4864,7 +4864,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "C404")
+					(reference "C305")
 					(unit 1)
 				)
 			)
@@ -4880,7 +4880,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c4155a9e-fbc2-4dcd-aff2-908ca1791c7e")
-		(property "Reference" "C406"
+		(property "Reference" "C304"
 			(at 76.2 93.0909 0)
 			(effects
 				(font
@@ -5015,7 +5015,7 @@
 		(instances
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "C406")
+					(reference "C304")
 					(unit 1)
 				)
 			)
@@ -5031,7 +5031,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f209e200-f8f8-4cd1-8883-2a87045c50f1")
-		(property "Reference" "R406"
+		(property "Reference" "R303"
 			(at 187.96 91.4399 0)
 			(effects
 				(font
@@ -5166,7 +5166,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "R406")
+					(reference "R303")
 					(unit 1)
 				)
 			)
@@ -5182,7 +5182,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5e2d2b4-8499-48a7-a526-919b82b25050")
-		(property "Reference" "U401"
+		(property "Reference" "U301"
 			(at 130.4133 77.47 0)
 			(effects
 				(font
@@ -5335,7 +5335,7 @@
 		(instances
 			(project ""
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
-					(reference "U401")
+					(reference "U301")
 					(unit 1)
 				)
 			)

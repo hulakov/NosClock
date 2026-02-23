@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "05132dda-f06d-43a7-9419-7925706cfd72")
+	(uuid "2d1e1e34-1fc3-4ce5-b184-15db8682666c")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Device:R"
@@ -129,7 +129,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:MMBTA42"
+		(symbol "Transistor_BJT:MPSA42"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -146,7 +146,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MMBTA42"
+			(property "Value" "MPSA42"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -155,7 +155,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -166,7 +166,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MPSA42-D.PDF"
 				(at 0 0 0)
 				(effects
 					(font
@@ -176,7 +176,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, TO-92"
 				(at 0 0 0)
 				(effects
 					(font
@@ -194,7 +194,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23*"
+			(property "ki_fp_filters" "TO?92*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -203,7 +203,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "MMBTA42_0_1"
+			(symbol "MPSA42_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy 0.635 0)
@@ -240,7 +240,7 @@
 					)
 				)
 			)
-			(symbol "MMBTA42_1_1"
+			(symbol "MPSA42_1_1"
 				(polyline
 					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
@@ -287,7 +287,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -323,7 +323,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -334,169 +334,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "mynixies:INS-1"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "N"
-				(at 0 7.62 0)
-				(effects
-					(font
-						(size 1.143 1.143)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "INS-1"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.143 1.143)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "mynixies_INS-1"
-				(at 0.762 3.81 0)
-				(effects
-					(font
-						(size 0.508 0.508)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "*INS-1*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "INS-1_1_0"
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "INS-1_1_1"
-				(circle
-					(center 0 0)
-					(radius 5.08)
-					(stroke
-						(width 0)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "C"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "P$1"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "P$2"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "power:+5V"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
+		(symbol "Transistor_BJT:MPSA92"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -504,24 +342,46 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
+			(property "Reference" "Q"
+				(at 5.08 1.905 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
+				)
+			)
+			(property "Value" "MPSA92"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+				(at 5.08 -1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
 					(hide yes)
 				)
 			)
-			(property "Value" "+5V"
-				(at 0 3.556 0)
+			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MPSA92-D.PDF"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
+					(hide yes)
 				)
 			)
-			(property "Footprint" ""
+			(property "Description" "0.5A Ic, 300V Vce, PNP High Voltage Transistor, TO-92"
 				(at 0 0 0)
 				(effects
 					(font
@@ -530,7 +390,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" ""
+			(property "ki_keywords" "PNP High Voltage Transistor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -539,7 +399,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(property "ki_fp_filters" "TO?92*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -548,19 +408,10 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+5V_0_1"
+			(symbol "MPSA92_0_1"
 				(polyline
 					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
+						(xy -2.54 0) (xy 0.635 0)
 					)
 					(stroke
 						(width 0)
@@ -572,7 +423,19 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0.635 1.905) (xy 0.635 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
 					)
 					(stroke
 						(width 0)
@@ -584,7 +447,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
 					)
 					(stroke
 						(width 0)
@@ -594,12 +457,71 @@
 						(type none)
 					)
 				)
+				(circle
+					(center 1.27 0)
+					(radius 2.8194)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.778) (xy 1.778 -2.286) (xy 1.27 -1.27) (xy 2.286 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 			)
-			(symbol "+5V_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
+			(symbol "MPSA92_1_1"
+				(pin input line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 5.08 270)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -720,498 +642,218 @@
 		)
 	)
 	(junction
-		(at 86.36 90.17)
+		(at 151.13 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d3c2fbeb-35c4-4498-b191-0bc2e5c680fb")
+		(uuid "57be0c20-7b3f-470a-8fd3-d71e81fda84d")
+	)
+	(junction
+		(at 114.3 102.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "62fdb74f-c3ea-4bdf-ab9d-dfddf6d4fe31")
+	)
+	(junction
+		(at 139.7 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "865c7c1e-ccf3-4cf0-8ab1-adc3d6a35316")
 	)
 	(wire
 		(pts
-			(xy 67.31 90.17) (xy 73.66 90.17)
+			(xy 151.13 104.14) (xy 151.13 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "169b0ba5-503c-41c5-b3d7-e0bbf27d9aa5")
+		(uuid "0a8bb0c9-a689-4c60-ac1f-7f57061936f9")
 	)
 	(wire
 		(pts
-			(xy 86.36 99.06) (xy 86.36 97.79)
+			(xy 139.7 90.17) (xy 143.51 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4f34421c-b818-4195-8887-d3bcd862bbef")
+		(uuid "1970775c-f69a-4aff-a7db-76855ce8e414")
 	)
 	(wire
 		(pts
-			(xy 86.36 90.17) (xy 96.52 90.17)
+			(xy 151.13 77.47) (xy 151.13 74.93)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "65afde99-d1f7-477d-a5aa-1a3699bb694f")
+		(uuid "1a630136-92e7-4e77-9ad1-ff937251c8b7")
 	)
 	(wire
 		(pts
-			(xy 81.28 90.17) (xy 86.36 90.17)
+			(xy 111.76 102.87) (xy 114.3 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b1914591-34b5-4664-af60-fef84fa17ddc")
+		(uuid "20970700-d1ba-4b7a-a0c0-1ab4a43d4cf4")
 	)
 	(wire
 		(pts
-			(xy 104.14 99.06) (xy 104.14 95.25)
+			(xy 114.3 104.14) (xy 114.3 102.87)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dddc6dc2-b33e-484b-a640-85aa838bcbf4")
+		(uuid "2e0fa196-7ee9-4576-ac89-53952ce6d934")
 	)
 	(wire
 		(pts
-			(xy 104.14 55.88) (xy 104.14 62.23)
+			(xy 125.73 90.17) (xy 128.27 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fdcca948-fc2f-4612-83ff-4845b5f87d74")
+		(uuid "343e570f-9e73-4ed1-9ded-685f249268df")
+	)
+	(wire
+		(pts
+			(xy 135.89 90.17) (xy 139.7 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63d8d51c-ca02-498f-b6bb-4f469c49b655")
+	)
+	(wire
+		(pts
+			(xy 139.7 77.47) (xy 151.13 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ba7bdd0-62c0-44e2-b456-b94b25df32d6")
+	)
+	(wire
+		(pts
+			(xy 114.3 102.87) (xy 118.11 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ea263d2-71a5-45b9-9c11-0ad274d3e9f2")
+	)
+	(wire
+		(pts
+			(xy 125.73 97.79) (xy 125.73 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9b685a6-d7af-4bc4-8d79-2928e4208e43")
+	)
+	(wire
+		(pts
+			(xy 101.6 102.87) (xy 104.14 102.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf76a16d-597a-454a-8b2b-c30aec1d05b0")
+	)
+	(wire
+		(pts
+			(xy 139.7 87.63) (xy 139.7 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cda0f29b-e475-43b5-a137-8dec891dd6bd")
+	)
+	(wire
+		(pts
+			(xy 151.13 77.47) (xy 151.13 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db3f1550-30f4-4183-8ee1-37bcf1e2cf31")
+	)
+	(wire
+		(pts
+			(xy 139.7 80.01) (xy 139.7 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4c2cfdb-2d84-4890-aaef-2aed867c38d6")
+	)
+	(wire
+		(pts
+			(xy 167.64 104.14) (xy 151.13 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f74487f1-113f-4793-8da0-56668aadaabf")
 	)
 	(hierarchical_label "EN"
 		(shape input)
-		(at 67.31 90.17 180)
+		(at 101.6 102.87 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "337316d9-1358-428f-9141-f111b61c4c49")
+		(uuid "47472616-ed46-49d4-bed6-623b4e16e673")
+	)
+	(hierarchical_label "VIN"
+		(shape input)
+		(at 151.13 74.93 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4ba30dc9-ed89-4db9-a624-8bc0eb31da92")
+	)
+	(hierarchical_label "VOUT"
+		(shape input)
+		(at 167.64 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4fa6c90b-96cf-42ee-aeba-8dcda3a9465e")
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 86.36 99.06 0)
+		(lib_id "Transistor_BJT:MPSA92")
+		(at 148.59 90.17 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0479d111-ed29-488e-82da-01336a346e8e")
-		(property "Reference" "#PWR0905"
-			(at 86.36 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 86.36 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 86.36 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "53240dcf-8337-40e3-b516-5b73ee0372d1")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
-					(reference "#PWR0905")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "#PWR0908")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "#PWR0907")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
-					(reference "#PWR0906")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 104.14 66.04 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "12ef011f-19dd-4327-b834-616c36ce2646")
-		(property "Reference" "R911"
-			(at 106.68 64.7699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "330K"
-			(at 106.68 67.3099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 105.918 66.04 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Availability" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description_1" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MP" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTNO" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Package" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" ""
-			(at 104.14 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b7e2b465-68a4-46f1-90fe-33c0363afa51")
-		)
-		(pin "2"
-			(uuid "c2313f0f-b145-4cce-b410-dbcddebc4cf8")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
-					(reference "R911")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "R910")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "R912")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
-					(reference "R913")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 86.36 93.98 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "29e8f130-500d-43f2-accf-2d3676b72764")
-		(property "Reference" "R908"
-			(at 88.9 92.7099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "47K"
-			(at 88.9 95.2499 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 88.138 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Availability" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description_1" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MP" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTNO" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Package" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" ""
-			(at 86.36 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3e7d2b87-fe44-4195-8597-2ef200514ae6")
-		)
-		(pin "2"
-			(uuid "5f08fa3a-4ee7-4eed-b2aa-76d83bb78b20")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
-					(reference "R908")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "R906")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "R909")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
-					(reference "R907")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:MMBTA42")
-		(at 101.6 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "39698c59-999f-4376-9ee7-4c7f9f482fa1")
-		(property "Reference" "Q901"
-			(at 106.68 88.8999 0)
+		(uuid "02192937-8fab-4e29-974d-ec115d03e277")
+		(property "Reference" "Q701"
+			(at 153.67 91.4401 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1219,8 +861,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MMBTA42"
-			(at 106.68 91.4399 0)
+		(property "Value" "MPSA92"
+			(at 153.67 88.9001 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1228,8 +870,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 106.68 92.075 0)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 153.67 88.265 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1239,8 +881,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
-			(at 101.6 90.17 0)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MPSA92-D.PDF"
+			(at 148.59 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1249,199 +891,36 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
-			(at 101.6 90.17 0)
+		(property "Description" "0.5A Ic, 300V Vce, PNP High Voltage Transistor, TO-92"
+			(at 148.59 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "Availability" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description_1" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MP" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTNO" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Package" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" ""
-			(at 101.6 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "c8dc7933-cfc2-456e-a7b0-e1a1789f33c2")
 		)
 		(pin "2"
-			(uuid "c424d1dd-cc10-4bc1-927c-39a40bf95a0d")
+			(uuid "a5112227-d029-43df-8128-a9181cd9c966")
+		)
+		(pin "3"
+			(uuid "97f14cdc-f482-44bf-aaa3-40f7de620726")
 		)
 		(pin "1"
-			(uuid "52ee342f-311f-4030-8966-f57a5ed729ee")
+			(uuid "7a9bfa9b-ef46-40a3-8a3c-8befb920453f")
 		)
 		(instances
 			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "Q801")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
 					(reference "Q901")
 					(unit 1)
 				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "Q904")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "Q902")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
-					(reference "Q903")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 104.14 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3b225a15-e0fc-4ef3-a0a5-df9c7358f42e")
-		(property "Reference" "#PWR0914"
-			(at 104.14 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 104.14 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 104.14 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 104.14 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "35bb8907-0cd7-4e63-8345-93a7f80e14ba")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
-					(reference "#PWR0914")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "#PWR0913")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "#PWR0916")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
-					(reference "#PWR0915")
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "Q701")
 					(unit 1)
 				)
 			)
@@ -1449,32 +928,32 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 77.47 90.17 90)
+		(at 132.08 90.17 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "71bc9736-5c2d-443d-8b86-670dd10d9c19")
-		(property "Reference" "R903"
-			(at 77.47 83.82 90)
+		(uuid "06926b00-de18-4352-be57-ea2c98927a01")
+		(property "Reference" "R702"
+			(at 132.08 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10K"
-			(at 77.47 86.36 90)
+		(property "Value" "220K"
+			(at 132.08 86.36 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 77.47 91.948 90)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 132.08 91.948 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1483,7 +962,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 77.47 90.17 0)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1492,7 +971,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 77.47 90.17 0)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1501,7 +980,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1510,7 +989,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1519,7 +998,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1528,7 +1007,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1537,7 +1016,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1546,7 +1025,7 @@
 			)
 		)
 		(property "PARTNO" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1555,7 +1034,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1564,7 +1043,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1573,7 +1052,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 77.47 90.17 90)
+			(at 132.08 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1582,216 +1061,40 @@
 			)
 		)
 		(pin "1"
-			(uuid "11574908-4529-48dc-9042-e8130f3b01a4")
+			(uuid "416845c9-07b1-46af-8254-85e1e21ad85d")
 		)
 		(pin "2"
-			(uuid "29af3927-3905-4dc0-b573-c510e88feec2")
+			(uuid "34636528-9f8d-4b05-a31d-d0fb6e5b6a99")
 		)
 		(instances
 			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
-					(reference "R903")
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "R802")
 					(unit 1)
 				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "R905")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "R904")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
 					(reference "R902")
 					(unit 1)
 				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "mynixies:INS-1")
-		(at 104.14 77.47 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "84047332-242e-4367-a674-80c434bce2e6")
-		(property "Reference" "N902"
-			(at 110.49 76.2 90)
-			(effects
-				(font
-					(size 1.143 1.143)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "INS-1"
-			(at 110.49 78.74 90)
-			(effects
-				(font
-					(size 1.143 1.143)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "mynixies:mynixies-INS-1"
-			(at 100.33 76.708 0)
-			(effects
-				(font
-					(size 0.508 0.508)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 104.14 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 104.14 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Availability" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Check_prices" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description_1" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MF" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MP" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PARTNO" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Package" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Price" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "SnapEDA_Link" ""
-			(at 104.14 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "P$1"
-			(uuid "de1ca21f-04e5-4d32-93ed-eb3f5d6688aa")
-		)
-		(pin "P$2"
-			(uuid "c03603e5-a3ae-4f13-9840-02228393c3e2")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
-					(reference "N902")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "N904")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "N901")
-					(unit 1)
-				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
-					(reference "N903")
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "R702")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 104.14 55.88 0)
+		(lib_id "Transistor_BJT:MPSA42")
+		(at 123.19 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "b9029f32-0b0c-4b0a-a86b-e3302d4df2db")
-		(property "Reference" "#PWR0909"
-			(at 104.14 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+170V"
-			(at 106.68 54.6099 0)
+		(uuid "1518010d-9c86-4004-92c6-7a2a81743a95")
+		(property "Reference" "Q702"
+			(at 128.27 101.5999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1799,8 +1102,38 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 104.14 55.88 0)
+		(property "Value" "MPSA42"
+			(at 128.27 104.1399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(at 128.27 104.775 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MPSA42-D.PDF"
+			(at 123.19 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, TO-92"
+			(at 123.19 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1808,8 +1141,62 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 104.14 55.88 0)
+		(pin "2"
+			(uuid "71732b52-a2ad-41e1-a883-6c60f47785f9")
+		)
+		(pin "3"
+			(uuid "d7be3114-e51f-4873-8ed4-80946a4ba6ad")
+		)
+		(pin "1"
+			(uuid "6947def6-67ff-4914-8eb7-ab5a71c5bb2c")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "Q802")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
+					(reference "Q902")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "Q702")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 139.7 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5b3ff021-4a12-487d-a72e-2ba6b68f321e")
+		(property "Reference" "R701"
+			(at 142.24 82.5499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220K"
+			(at 142.24 85.0899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 137.922 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1817,8 +1204,98 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 104.14 55.88 0)
+		(property "Datasheet" "~"
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTNO" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 139.7 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 139.7 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1827,24 +1304,487 @@
 			)
 		)
 		(pin "1"
-			(uuid "67a6a2ae-40eb-4d32-96ef-c956e5128963")
+			(uuid "30cc87eb-d1e1-46a0-bf8e-c00b70bba7c4")
+		)
+		(pin "2"
+			(uuid "c208276b-250e-485c-a463-1d0f9c4f5f86")
 		)
 		(instances
 			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/421bee82-978c-476a-94d6-bf8206f0e4b7"
-					(reference "#PWR0909")
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "R801")
 					(unit 1)
 				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/4e6a5b56-0b75-4ec7-9ffc-88ac84d158a2"
-					(reference "#PWR0912")
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
+					(reference "R901")
 					(unit 1)
 				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/522fdeef-dc62-4afe-b57c-5f13254d59d6"
-					(reference "#PWR0911")
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "R701")
 					(unit 1)
 				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/257ab22e-1a8b-4d6a-b1a9-76ed38c9a17d/a4697648-e011-400b-85bc-c958e4340dd6"
-					(reference "#PWR0910")
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 107.95 102.87 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5e14c398-33d2-424d-b9a0-062d27f3ccb7")
+		(property "Reference" "R703"
+			(at 107.95 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 107.95 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 107.95 104.648 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTNO" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 107.95 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3adf2d6f-2047-4e1c-b8aa-626643e91a77")
+		)
+		(pin "2"
+			(uuid "3abe68e9-9cc6-4c25-bd34-5e6e2fb64350")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "R803")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
+					(reference "R903")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "R703")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 114.3 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "add05b57-a3a9-479e-8a60-1d715f9bbb05")
+		(property "Reference" "#PWR0702"
+			(at 114.3 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 114.3 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 114.3 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "477afcd1-c8e9-4d46-9953-130f5d1c7241")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "#PWR0802")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
+					(reference "#PWR0902")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "#PWR0702")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 125.73 107.95 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b88c9feb-a9f5-4c21-a86d-abadbf3c9317")
+		(property "Reference" "#PWR0701"
+			(at 125.73 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 125.73 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 125.73 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bdc9102d-db4f-4137-98b4-714ec35ae0ac")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "#PWR0801")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
+					(reference "#PWR0901")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "#PWR0701")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 114.3 107.95 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fb6075d3-faa3-42fa-9d1f-b4f7dab99ce8")
+		(property "Reference" "R704"
+			(at 116.84 106.6799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "47K"
+			(at 116.84 109.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 116.078 107.95 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTNO" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 114.3 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10712ec5-5331-4583-a4f5-ea2468179650")
+		)
+		(pin "2"
+			(uuid "6d47f965-5039-4cd5-b8ac-4b283f8f406f")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/1c424bc5-98a3-4407-a843-d84953973710"
+					(reference "R804")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/39d58b35-aa77-439d-973f-4d49f0632d56"
+					(reference "R904")
+					(unit 1)
+				)
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/99ba67ee-e3d0-4e0a-b740-4da2fce5691d"
+					(reference "R704")
 					(unit 1)
 				)
 			)
