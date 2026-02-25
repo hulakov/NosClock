@@ -552,7 +552,7 @@
       },
       {
         "netclass": "PWR",
-        "pattern": "*/+12V"
+        "pattern": "+12V"
       },
       {
         "netclass": "PWR",
