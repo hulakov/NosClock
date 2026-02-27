@@ -1292,6 +1292,107 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 261.62 87.63)
@@ -1318,7 +1419,7 @@
 		(uuid "318674f1-6565-4e32-a4fc-3238aa690e2a")
 	)
 	(junction
-		(at 40.64 88.9)
+		(at 82.55 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "62f60da0-5361-43f8-86f6-f057d284270c")
@@ -1348,6 +1449,12 @@
 		(uuid "ad102931-8132-4b3e-a01a-165486143ebe")
 	)
 	(junction
+		(at 96.52 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aef79bf8-8eb1-4e2e-9149-d610c6545124")
+	)
+	(junction
 		(at 128.27 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1364,10 +1471,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e0abc3d8-e278-4396-aaba-9a5c6b860af1")
-	)
-	(no_connect
-		(at 68.58 152.4)
-		(uuid "6083c81c-5cc8-4408-a74e-132ee6b19660")
 	)
 	(no_connect
 		(at 147.32 175.26)
@@ -1485,7 +1588,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 88.9) (xy 53.34 88.9)
+			(xy 90.17 87.63) (xy 96.52 87.63)
 		)
 		(stroke
 			(width 0)
@@ -1605,7 +1708,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 88.9) (xy 40.64 88.9)
+			(xy 76.2 87.63) (xy 82.55 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2025,16 +2128,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 152.4) (xy 67.31 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2d986c6-d949-4a11-9dcc-4d32e27925fe")
-	)
-	(wire
-		(pts
 			(xy 128.27 81.28) (xy 152.4 81.28)
 		)
 		(stroke
@@ -2315,6 +2408,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 87.63) (xy 121.92 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0112040-b446-45fb-acf0-603a55b2acff")
+	)
+	(wire
+		(pts
 			(xy 67.31 132.08) (xy 87.63 132.08)
 		)
 		(stroke
@@ -2382,26 +2485,6 @@
 			(type default)
 		)
 		(uuid "fb40cbc0-7b72-4994-9596-9d48e2bb4426")
-	)
-	(label "FIRST_SK6812MINI_VCC"
-		(at 121.92 87.63 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "176549cc-1204-400e-89f7-c021a38c1a1b")
-	)
-	(label "FIRST_SK6812MINI_VCC"
-		(at 53.34 88.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8b0b0254-06f1-4d07-a0bc-7e3594ac1ce4")
 	)
 	(hierarchical_label "+3V3"
 		(shape input)
@@ -2570,7 +2653,7 @@
 	)
 	(hierarchical_label "+5V"
 		(shape input)
-		(at 34.29 88.9 180)
+		(at 76.2 87.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2651,6 +2734,72 @@
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c"
 					(reference "#PWR0402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 96.52 87.63 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "08f54fd7-197d-4987-aa7d-b86d7529685a")
+		(property "Reference" "#FLG0401"
+			(at 96.52 85.725 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 96.52 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 96.52 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 96.52 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8c26d98-01ce-4dcd-9833-61cfe82079c5")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c"
+					(reference "#FLG0401")
 					(unit 1)
 				)
 			)
@@ -2959,7 +3108,7 @@
 	)
 	(symbol
 		(lib_id "Device:D")
-		(at 44.45 88.9 180)
+		(at 86.36 87.63 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2968,7 +3117,7 @@
 		(fields_autoplaced yes)
 		(uuid "29ea94b0-0682-4a7f-b647-6fe0a641badf")
 		(property "Reference" "D401"
-			(at 44.45 82.55 0)
+			(at 86.36 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2976,7 +3125,7 @@
 			)
 		)
 		(property "Value" "ES1J"
-			(at 44.45 85.09 0)
+			(at 86.36 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2984,7 +3133,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2993,7 +3142,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3002,7 +3151,7 @@
 			)
 		)
 		(property "Description" "Diode"
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3011,7 +3160,7 @@
 			)
 		)
 		(property "Sim.Device" "D"
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3020,7 +3169,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3029,7 +3178,7 @@
 			)
 		)
 		(property "Availability" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3038,7 +3187,7 @@
 			)
 		)
 		(property "Check_prices" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3047,7 +3196,7 @@
 			)
 		)
 		(property "Description_1" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3056,7 +3205,7 @@
 			)
 		)
 		(property "MF" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3065,7 +3214,7 @@
 			)
 		)
 		(property "MP" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3074,7 +3223,7 @@
 			)
 		)
 		(property "PARTNO" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3083,7 +3232,7 @@
 			)
 		)
 		(property "Package" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3092,7 +3241,7 @@
 			)
 		)
 		(property "Price" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3101,7 +3250,7 @@
 			)
 		)
 		(property "SnapEDA_Link" ""
-			(at 44.45 88.9 0)
+			(at 86.36 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3293,7 +3442,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "mynixies:mynixies-INS-1"
+		(property "Footprint" "NosLib:INS-1"
 			(at 252.222 101.6 0)
 			(effects
 				(font
@@ -3418,7 +3567,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 40.64 96.52 0)
+		(at 82.55 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3427,7 +3576,7 @@
 		(fields_autoplaced yes)
 		(uuid "63513eb6-572f-42d0-8875-d8cbbdfdc6b9")
 		(property "Reference" "#PWR0401"
-			(at 40.64 102.87 0)
+			(at 82.55 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3436,7 +3585,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 40.64 101.6 0)
+			(at 82.55 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3444,7 +3593,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 40.64 96.52 0)
+			(at 82.55 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3453,7 +3602,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 40.64 96.52 0)
+			(at 82.55 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3462,7 +3611,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 40.64 96.52 0)
+			(at 82.55 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3484,7 +3633,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
-		(at 40.64 92.71 180)
+		(at 82.55 91.44 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3493,7 +3642,7 @@
 		(fields_autoplaced yes)
 		(uuid "67aa7e51-265e-49f2-8238-8ab354a2168f")
 		(property "Reference" "C401"
-			(at 44.45 92.3289 0)
+			(at 86.36 91.0589 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3502,7 +3651,7 @@
 			)
 		)
 		(property "Value" "100uF 10V"
-			(at 44.45 94.8689 0)
+			(at 86.36 93.5989 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3511,7 +3660,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
-			(at 39.6748 88.9 0)
+			(at 81.5848 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3520,7 +3669,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 40.64 92.71 0)
+			(at 82.55 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3529,7 +3678,7 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
-			(at 40.64 92.71 0)
+			(at 82.55 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3728,7 +3877,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "mynixies:mynixies-INS-1"
+		(property "Footprint" "NosLib:INS-1"
 			(at 252.222 128.27 0)
 			(effects
 				(font
@@ -3944,7 +4093,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "mynixies:mynixies-INS-1"
+		(property "Footprint" "NosLib:INS-1"
 			(at 252.222 36.83 0)
 			(effects
 				(font
@@ -4721,7 +4870,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "mynixies:mynixies-INS-1"
+		(property "Footprint" "NosLib:INS-1"
 			(at 252.222 63.5 0)
 			(effects
 				(font

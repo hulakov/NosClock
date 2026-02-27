@@ -1512,8 +1512,109 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "power:PWR_FLAG"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#FLG"
+				(at 0 1.905 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "flag power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PWR_FLAG_0_0"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
-	(text "Vout=2.5 * (1 + R406/R407)=2.5 * (1 + 680K / 10K) = 172.5V"
+	(text "Vout=2.5 * (1 + Rtop/Rbottom)=2.5 * (1 + 680K / 10K) = 172.5V"
 		(exclude_from_sim no)
 		(at 135.89 136.906 0)
 		(effects
@@ -1558,6 +1659,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7713d6bc-3f60-4843-800e-9d8020ee9516")
+	)
+	(junction
+		(at 128.27 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9aa194fd-1895-4b73-b57b-f00726dea069")
 	)
 	(junction
 		(at 72.39 64.77)
@@ -1657,7 +1764,7 @@
 	)
 	(wire
 		(pts
-			(xy 128.27 71.12) (xy 128.27 80.01)
+			(xy 128.27 71.12) (xy 128.27 73.66)
 		)
 		(stroke
 			(width 0)
@@ -2067,6 +2174,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 73.66) (xy 128.27 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eebe1845-b126-4280-b21d-c84930bcbf54")
+	)
+	(wire
+		(pts
 			(xy 72.39 64.77) (xy 72.39 91.44)
 		)
 		(stroke
@@ -2145,28 +2262,6 @@
 			(justify right)
 		)
 		(uuid "197d26df-f2f2-48c2-8be8-19d4a97dc3d7")
-	)
-	(hierarchical_label "PWR_GND"
-		(shape input)
-		(at 359.41 118.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4892f5bd-6fa5-4c6a-b689-796cfd011323")
-	)
-	(hierarchical_label "170V"
-		(shape input)
-		(at 434.34 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "934943c7-03f7-4219-981c-d099c40ed6cd")
 	)
 	(hierarchical_label "+12V"
 		(shape input)
@@ -3023,6 +3118,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 128.27 73.66 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3ae9d58e-b373-4781-85cf-1a0b91daeb3d")
+		(property "Reference" "#FLG0301"
+			(at 130.175 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 132.08 73.6599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 128.27 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10a60b3b-e7b2-4990-b862-be2f19972c36")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
+					(reference "#FLG0301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 185.42 115.57 0)
 		(unit 1)
@@ -3865,7 +4027,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
 			(at 204.1652 96.52 0)
 			(effects
 				(font

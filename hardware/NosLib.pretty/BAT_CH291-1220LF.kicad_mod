@@ -51,8 +51,8 @@
 	)
 	(attr smd)
 	(fp_line
-		(start -11 -0.5)
-		(end -11 0.5)
+		(start -9.10337 1.923966)
+		(end -9.10337 2.923966)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -61,8 +61,8 @@
 		(uuid "0afa34ff-e90e-44a8-9707-544969a8e64c")
 	)
 	(fp_line
-		(start -10.5 0)
-		(end -11.5 0)
+		(start -8.60337 2.404574)
+		(end -9.60337 2.404574)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -151,8 +151,8 @@
 		(uuid "8e5dfbfd-23c6-4692-9c0b-a53fda9f2cf0")
 	)
 	(fp_line
-		(start 10.5 0)
-		(end 11.25 0)
+		(start 7.948236 2.404574)
+		(end 8.698236 2.404574)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -391,8 +391,8 @@
 		(uuid "705ad6fa-039c-48b2-8f39-b0ab173c1bd7")
 	)
 	(fp_line
-		(start -11.5 0)
-		(end -10.5 0)
+		(start -9.60337 2.423966)
+		(end -8.60337 2.423966)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -401,8 +401,8 @@
 		(uuid "399f1923-5330-456d-9e29-89cdc9564c01")
 	)
 	(fp_line
-		(start -11 -0.5)
-		(end -11 0.5)
+		(start -9.10337 1.923966)
+		(end -9.10337 2.923966)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -611,8 +611,8 @@
 		(uuid "17d5b53a-e00c-45c2-afb1-232ce47394da")
 	)
 	(fp_line
-		(start 10.5 0)
-		(end 11.25 0)
+		(start 7.948236 2.404574)
+		(end 8.698236 2.404574)
 		(stroke
 			(width 0.127)
 			(type solid)
@@ -803,7 +803,7 @@
 		(uuid "62d3bf2a-303f-4710-87a1-9eb00f6eb134")
 	)
 	(embedded_fonts no)
-	(model "C:/Users/vadym/Downloads/CH291-1220LF--3DModel-STEP-740395.STEP"
+	(model "${KIPRJMOD}/NosLib.pretty/CH291-1220LF--3DModel-STEP-740395.STEP"
 		(offset
 			(xyz 0 0 0)
 		)

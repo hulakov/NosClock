@@ -3741,7 +3741,7 @@
 				)
 			)
 		)
-		(property "Value" "22K"
+		(property "Value" "4.7K"
 			(at 121.92 125.73 90)
 			(effects
 				(font
@@ -3749,7 +3749,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 121.92 131.318 90)
 			(effects
 				(font
@@ -4205,7 +4205,7 @@
 				)
 			)
 		)
-		(property "Footprint" "nixies-us:nixies-us-IN-12"
+		(property "Footprint" "NosLib:nixies-us-IN-12"
 			(at 107.95 88.9 0)
 			(effects
 				(font
@@ -4621,7 +4621,7 @@
 				)
 			)
 		)
-		(property "Footprint" "nixies-us:nixies-us-IN-12"
+		(property "Footprint" "NosLib:nixies-us-IN-12"
 			(at 106.68 48.26 0)
 			(effects
 				(font
@@ -5137,7 +5137,7 @@
 				)
 			)
 		)
-		(property "Value" "22K"
+		(property "Value" "4.7K"
 			(at 120.65 44.45 90)
 			(effects
 				(font
@@ -5145,7 +5145,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 120.65 50.038 90)
 			(effects
 				(font
@@ -5598,7 +5598,7 @@
 				)
 			)
 		)
-		(property "Value" "22K"
+		(property "Value" "4.7K"
 			(at 121.92 85.09 90)
 			(effects
 				(font
@@ -5606,7 +5606,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
 			(at 121.92 90.678 90)
 			(effects
 				(font
@@ -6432,7 +6432,7 @@
 				)
 			)
 		)
-		(property "Footprint" "nixies-us:nixies-us-IN-12"
+		(property "Footprint" "NosLib:nixies-us-IN-12"
 			(at 107.95 129.54 0)
 			(effects
 				(font
