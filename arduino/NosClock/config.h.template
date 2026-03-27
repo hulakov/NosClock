@@ -1,0 +1,10 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+namespace config {
+    constexpr char const* SSID = "xxxxx";
+    constexpr char const* PASSWORD = "xxxxx";
+    constexpr char const* HOSTNAME = "NosClock";
+}
+
+#endif
