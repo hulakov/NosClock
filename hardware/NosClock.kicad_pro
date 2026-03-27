@@ -568,7 +568,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "NosClock.step",
       "svg": "",
       "vrml": ""
     },

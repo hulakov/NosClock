@@ -1704,16 +1704,6 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 106.68) (xy 165.1 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "003c234a-c8b7-4c41-84d0-20ac3e356d6c")
-	)
-	(wire
-		(pts
 			(xy 72.39 99.06) (xy 72.39 116.84)
 		)
 		(stroke
@@ -2154,6 +2144,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 114.3) (xy 165.1 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e47cb48a-3cbd-4c35-b198-8d52d9a0386f")
+	)
+	(wire
+		(pts
 			(xy 144.78 106.68) (xy 144.78 115.57)
 		)
 		(stroke
@@ -2543,7 +2543,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "AOD11S60"
+		(property "Value" "FQD12N20L"
 			(at 168.91 86.3599 0)
 			(effects
 				(font
@@ -3276,7 +3276,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_APV_APH1030"
+		(property "Footprint" "Inductor_SMD:L_Chilisin_BMRF00101040"
 			(at 149.86 64.77 0)
 			(effects
 				(font
@@ -4600,7 +4600,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.5R"
+		(property "Value" "0.25R"
 			(at 167.64 104.1399 0)
 			(effects
 				(font
@@ -4727,6 +4727,157 @@
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
 					(reference "R306")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 165.1 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a1d2bfcc-dea1-460d-bf07-3ece8de203f9")
+		(property "Reference" "R308"
+			(at 167.64 109.2199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.25R"
+			(at 167.64 111.7599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 163.322 110.49 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Availability" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description_1" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PARTNO" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Package" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Price" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 165.1 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ac10e86-4abc-4c46-b352-4a4efe727702")
+		)
+		(pin "2"
+			(uuid "3740923c-01bf-4f35-938f-3cb78b662b80")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/d05e6a5c-9ec2-4dd0-8405-1e4b63289adc"
+					(reference "R308")
 					(unit 1)
 				)
 			)

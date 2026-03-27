@@ -4205,7 +4205,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NosLib:nixies-us-IN-12"
+		(property "Footprint" "nixies-us:IN-12"
 			(at 107.95 88.9 0)
 			(effects
 				(font
@@ -4621,7 +4621,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NosLib:nixies-us-IN-12"
+		(property "Footprint" "nixies-us:IN-12"
 			(at 106.68 48.26 0)
 			(effects
 				(font
@@ -6432,7 +6432,7 @@
 				)
 			)
 		)
-		(property "Footprint" "NosLib:nixies-us-IN-12"
+		(property "Footprint" "nixies-us:IN-12"
 			(at 107.95 129.54 0)
 			(effects
 				(font

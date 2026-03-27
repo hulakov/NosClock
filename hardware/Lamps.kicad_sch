@@ -828,7 +828,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:MPSA42"
+		(symbol "Transistor_BJT:MMBTA42"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -845,7 +845,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "MPSA42"
+			(property "Value" "MMBTA42"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -854,7 +854,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -865,7 +865,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MPSA42-D.PDF"
+			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
 				(at 0 0 0)
 				(effects
 					(font
@@ -875,7 +875,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, TO-92"
+			(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -893,7 +893,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -902,7 +902,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "MPSA42_0_1"
+			(symbol "MMBTA42_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy 0.635 0)
@@ -939,7 +939,7 @@
 					)
 				)
 			)
-			(symbol "MPSA42_1_1"
+			(symbol "MMBTA42_1_1"
 				(polyline
 					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
@@ -986,7 +986,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1022,7 +1022,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3274,82 +3274,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:MPSA42")
-		(at 214.63 95.25 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "33067995-58d0-4287-b546-a07f49f6f7e5")
-		(property "Reference" "Q401"
-			(at 219.71 93.9799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MPSA42"
-			(at 219.71 96.5199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 219.71 97.155 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/MPSA42-D.PDF"
-			(at 214.63 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, TO-92"
-			(at 214.63 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "400e93fa-34fd-4a17-9ebe-e8cd265fcab8")
-		)
-		(pin "3"
-			(uuid "992cda44-3a96-4c6f-8f2a-01b04f5813c2")
-		)
-		(pin "1"
-			(uuid "31e65aca-cd50-49f9-afdb-849b4eac5a17")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c"
-					(reference "Q401")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 217.17 104.14 0)
 		(unit 1)
@@ -4988,6 +4912,82 @@
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c"
 					(reference "N402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA42")
+		(at 214.63 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dd4607d9-bab0-476a-933f-902b1cd95650")
+		(property "Reference" "Q402"
+			(at 219.71 93.9799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA42"
+			(at 219.71 96.5199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 219.71 97.155 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/MMBTA42LT1-D.PDF"
+			(at 214.63 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 300V Vce, NPN High Voltage Transistor, SOT-23"
+			(at 214.63 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "e0d0d47a-0cef-464d-a8cf-b6ed5454600a")
+		)
+		(pin "1"
+			(uuid "68464cce-13ad-46c2-ae9e-26656bd25a5c")
+		)
+		(pin "2"
+			(uuid "454e318c-f479-480f-9c96-7bd197e99edb")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c"
+					(reference "Q402")
 					(unit 1)
 				)
 			)
