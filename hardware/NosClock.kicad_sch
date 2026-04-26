@@ -3978,16 +3978,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 171.45) (xy 110.49 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "03a25fc8-151a-4638-bdc9-9ce6be0187d1")
-	)
-	(wire
-		(pts
 			(xy 226.06 127) (xy 223.52 127)
 		)
 		(stroke
@@ -4218,16 +4208,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 176.53) (xy 110.49 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3f6ddcd3-7b5c-47f1-94a8-0208add83761")
-	)
-	(wire
-		(pts
 			(xy 255.27 71.12) (xy 251.46 71.12)
 		)
 		(stroke
@@ -4238,7 +4218,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 176.53) (xy 105.41 176.53)
+			(xy 101.6 176.53) (xy 121.92 176.53)
 		)
 		(stroke
 			(width 0)
@@ -4828,7 +4808,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 171.45) (xy 105.41 171.45)
+			(xy 101.6 171.45) (xy 121.92 171.45)
 		)
 		(stroke
 			(width 0)
@@ -5979,10 +5959,6 @@
 					(reference "BT101")
 					(unit 1)
 				)
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3/cbfce168-24b0-4ff9-a45f-71f9f499ca5c/be8b82a5-add1-4f70-b173-db026f30f284"
-					(reference "BT101")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -6397,85 +6373,6 @@
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
 					(reference "#PWR0107")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:NetTie_2")
-		(at 107.95 171.45 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "15b53219-f986-4dcc-8f91-869039503a67")
-		(property "Reference" "NT102"
-			(at 108.458 169.418 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NetTie_2"
-			(at 108.458 166.878 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
-			(at 107.95 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 107.95 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Net tie, 2 pins"
-			(at 107.95 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "8a24969a-ae89-4d97-a462-01989a78ee50")
-		)
-		(pin "1"
-			(uuid "e2d197e9-c110-4bad-af71-3db95be0d7b9")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "NT102")
 					(unit 1)
 				)
 			)
@@ -7209,85 +7106,6 @@
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
 					(reference "TP_102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:NetTie_2")
-		(at 107.95 176.53 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "26ee01f3-da57-42f3-a174-10e881cfc7a3")
-		(property "Reference" "NT103"
-			(at 108.712 180.848 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "NetTie_2"
-			(at 108.712 178.308 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "NetTie:NetTie-2_SMD_Pad0.5mm"
-			(at 107.95 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 107.95 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Net tie, 2 pins"
-			(at 107.95 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "5b854a30-e9c5-4d25-9eb2-b4255aaa9e43")
-		)
-		(pin "1"
-			(uuid "d584984d-9259-47d7-bdc5-86fed4a84ee3")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "NT103")
 					(unit 1)
 				)
 			)
@@ -11807,7 +11625,6 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "cd0a6141-8eda-4bd4-a194-f2b319446508")
 		(property "Reference" "#PWR0134"
 			(at 261.62 140.97 0)
