@@ -1,14 +1,14 @@
 (footprint "nixies-us-IN-12"
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "MAY BE USED WITH SOCKET: SK-136")
 	(tags "MAY BE USED WITH SOCKET: SK-136")
 	(property "Reference" ">NAME"
 		(at -0.7 -11.9 180)
 		(layer "F.SilkS")
-		(uuid "c6552819-0cea-4f20-9639-4b733b0adf6d")
+		(uuid "b36d8874-71ee-4425-88c4-b81e1d7b8fd5")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "Val**"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "3fc9ae19-28dd-4200-a938-9be6893d035a")
+		(uuid "26697a22-602a-4023-8696-e37111930322")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -31,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5e886b38-c772-49d8-9341-b884956db778")
+		(uuid "3e26e485-4201-4010-b6dd-2102fa3bb019")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "414473fc-c311-4dfd-9b9b-0ac1b441ded3")
+		(uuid "461e7aac-9395-4e98-b147-d8c45bc0c374")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -52,6 +52,7 @@
 		)
 	)
 	(attr exclude_from_pos_files exclude_from_bom)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -9.92124 9.68248)
 		(end -9.92124 -10.16)
@@ -60,7 +61,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "f290acfc-0002-40df-ad87-b286511428d6")
+		(uuid "e481e883-9041-40a9-be95-d09e91e7719e")
 	)
 	(fp_line
 		(start 9.92124 -10.16)
@@ -70,7 +71,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "fc356117-0851-4959-aeab-eba282b342c2")
+		(uuid "4d8bec01-8992-4273-8039-e6b13a7acfde")
 	)
 	(fp_arc
 		(start -9.92124 -10.16)
@@ -81,7 +82,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "d2bc7471-f4c5-457e-87c0-4f2ee8aac239")
+		(uuid "9db9f9ac-6c07-4e8d-9896-5d77edc44832")
 	)
 	(fp_arc
 		(start 9.92124 9.68248)
@@ -92,7 +93,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "49aae930-9d1e-46ed-af10-836bed00c93b")
+		(uuid "765a2e11-d18c-4e6b-8a41-735ee9319830")
 	)
 	(fp_circle
 		(center 0 0)
@@ -103,62 +104,62 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "56eb24e8-3e42-4dba-931f-48ba11b83d75")
+		(uuid "3184ccad-5fe9-43a4-a404-ebc2dccd4700")
 	)
 	(pad "" np_thru_hole circle
 		(at 0 0)
 		(size 4.99872 4.99872)
 		(drill 4.99872)
 		(layers "*.Cu" "*.Mask")
-		(uuid "7873a6fa-1104-4fd0-9755-99b0d684b2bd")
+		(uuid "7f385929-6d29-4fb8-af1a-3ff3eb920aee")
 	)
 	(pad "0" thru_hole circle
-		(at 5.99948 4.49834)
+		(at 5.59948 4.49834)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "4bdf2596-9251-43e1-ade5-f17a315a5940")
+		(uuid "7964285c-5ac1-4900-bca4-15defbff4f75")
 	)
 	(pad "1" thru_hole circle
-		(at -4.31546 7.81558)
+		(at -3.81546 7.81558)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "94515c14-f217-4112-8b9c-a58a12d785bb")
+		(uuid "e527b00d-4221-4467-a6c2-915e06689790")
 	)
 	(pad "2" thru_hole circle
-		(at -5.99948 4.49834)
+		(at -5.59948 4.49834)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "4693a0d1-8be3-470f-803d-c21053a5d9c3")
+		(uuid "30680db6-2622-49f5-8b23-e1e472b0a1f2")
 	)
 	(pad "3" thru_hole circle
-		(at -6.12648 0)
+		(at -5.82648 0)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "5f2be0fa-941c-4d9e-a9a0-198247cfd933")
+		(uuid "4ca4c29f-9a6b-4441-b437-b30e1b27f766")
 	)
 	(pad "4" thru_hole circle
-		(at -5.99948 -4.49834)
+		(at -5.59948 -4.49834)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "b2f75cab-6a4a-45f6-a040-7e57128a9fc5")
+		(uuid "0c0fe87f-7be9-431e-b69a-320f8b0210d9")
 	)
 	(pad "5" thru_hole circle
-		(at -4.31546 -7.81558)
+		(at -3.81546 -7.81558)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "c9d84c0b-804e-4ed0-82d0-ada7f3a0cbb9")
+		(uuid "3d20f751-e297-4227-a7b0-d75f2be858ba")
 	)
 	(pad "6" thru_hole circle
 		(at 0 -8.81634)
@@ -166,39 +167,39 @@
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "f6bf4f5e-7be3-473a-ac9e-c5104b1ffb40")
+		(uuid "bcd0a67a-6c12-41f1-b7c3-4c0a891252c9")
 	)
 	(pad "7" thru_hole circle
-		(at 4.31546 -7.81558)
+		(at 3.81546 -7.81558)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "58303bef-82dd-41f8-926b-079edb4942f7")
+		(uuid "8b60844d-c4bc-4b73-ad39-f3771c352145")
 	)
 	(pad "8" thru_hole circle
-		(at 5.99948 -4.49834)
+		(at 5.59948 -4.49834)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "66491b90-3888-4d22-b152-493101dea970")
+		(uuid "1618522e-507b-4334-afbd-c5302563e8bf")
 	)
 	(pad "9" thru_hole circle
-		(at 6.12648 0)
+		(at 5.82648 0)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "99d593f3-1476-4293-9348-8e5bb042a1e9")
+		(uuid "76599028-e62c-4685-9eeb-051aa306881a")
 	)
 	(pad "A" thru_hole circle
-		(at 4.31546 7.81558)
+		(at 3.81546 7.81558)
 		(size 2.54 2.54)
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "b66fcf67-539b-4056-893b-6370078eb8a0")
+		(uuid "0cb12d46-ba71-4712-a34d-d389b46584e9")
 	)
 	(pad "LHDP" thru_hole circle
 		(at 0 8.81634)
@@ -206,12 +207,12 @@
 		(drill 1.09982)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "6533558c-49ee-439c-a18d-52eba190b0f1")
+		(uuid "b66926b7-ad02-4f0a-a1e2-911171330d80")
 	)
 	(group ""
-		(uuid "4760ef48-ce62-40c6-b9ba-91c81143a524")
-		(members "49aae930-9d1e-46ed-af10-836bed00c93b" "d2bc7471-f4c5-457e-87c0-4f2ee8aac239"
-			"f290acfc-0002-40df-ad87-b286511428d6" "fc356117-0851-4959-aeab-eba282b342c2"
+		(uuid "464575b2-9e87-4f0f-8a44-a4074cd69677")
+		(members "4d8bec01-8992-4273-8039-e6b13a7acfde" "765a2e11-d18c-4e6b-8a41-735ee9319830"
+			"9db9f9ac-6c07-4e8d-9896-5d77edc44832" "e481e883-9041-40a9-be95-d09e91e7719e"
 		)
 	)
 	(embedded_fonts no)

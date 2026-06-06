@@ -1283,6 +1283,39 @@
 					)
 				)
 			)
+			(property "Sim.Device" "V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "DC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=+ 2=-"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(property "ki_keywords" "battery cell"
 				(at 0 0 0)
 				(show_name no)
@@ -1973,7 +2006,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -25.4 30.48 0)
+				(at -25.4 26.924 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1984,14 +2017,14 @@
 				)
 			)
 			(property "Value" "ESP32-C3-MINI-1"
-				(at -25.4 27.94 0)
+				(at 25.4 26.924 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
+					(justify right)
 				)
 			)
 			(property "Footprint" "PCM_Espressif:ESP32-C3-MINI-1"
@@ -2017,7 +2050,7 @@
 				)
 			)
 			(property "Description" "ESP32-C3-MINI-1 family is an ultra-low-power MCU-based SoC solution that supports 2.4 GHz Wi-Fi and Bluetooth®Low Energy (Bluetooth LE)."
-				(at 0 0 0)
+				(at 0 -40.64 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -3871,12 +3904,6 @@
 		(uuid "4e7c6e50-c547-44b3-8b5a-c0db7b68360e")
 	)
 	(junction
-		(at 121.92 176.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5418dbc1-896d-4468-82da-c332a5f12d6e")
-	)
-	(junction
 		(at 161.29 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3895,12 +3922,6 @@
 		(uuid "a8a10cc6-ebe7-45fc-bf36-f0e7d1082483")
 	)
 	(junction
-		(at 121.92 171.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b6c1158e-d91a-482d-ad01-72c0649f0db2")
-	)
-	(junction
 		(at 36.83 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3917,6 +3938,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7524174-693c-4540-8e75-829e08ae2867")
+	)
+	(junction
+		(at 46.99 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f548cb06-c898-431f-8afb-e85c223afabd")
 	)
 	(no_connect
 		(at 204.47 125.73)
@@ -3955,12 +3982,12 @@
 		(uuid "b9c253cd-c7a7-48ba-9f4f-5d4955cd3c54")
 	)
 	(no_connect
-		(at 179.07 135.89)
-		(uuid "d0c67d64-f08f-41a1-b1bb-887263867a3d")
+		(at 255.27 58.42)
+		(uuid "c94eb482-7d57-479c-a318-a7fe96e8b13a")
 	)
 	(no_connect
-		(at 255.2472 58.42)
-		(uuid "d22ed7e5-6519-4502-bb71-74cf32963530")
+		(at 179.07 135.89)
+		(uuid "d0c67d64-f08f-41a1-b1bb-887263867a3d")
 	)
 	(wire
 		(pts
@@ -4024,16 +4051,6 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 171.45) (xy 121.92 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0f76c205-4b44-42b1-8fa6-bc11d9782e0a")
-	)
-	(wire
-		(pts
 			(xy 36.83 22.86) (xy 36.83 27.94)
 		)
 		(stroke
@@ -4041,6 +4058,16 @@
 			(type default)
 		)
 		(uuid "0feb294f-7a00-4613-86e5-064738667af6")
+	)
+	(wire
+		(pts
+			(xy 46.99 129.54) (xy 46.99 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10c1d816-438d-4cab-8fa0-8b144362c54f")
 	)
 	(wire
 		(pts
@@ -4214,16 +4241,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 176.53) (xy 121.92 176.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4590af74-af00-48f8-a097-61d62911dc77")
-	)
-	(wire
-		(pts
 			(xy 46.99 142.24) (xy 73.66 142.24)
 		)
 		(stroke
@@ -4254,7 +4271,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 176.53) (xy 121.92 176.53)
+			(xy 101.6 176.53) (xy 129.54 176.53)
 		)
 		(stroke
 			(width 0)
@@ -4614,6 +4631,16 @@
 	)
 	(wire
 		(pts
+			(xy 251.46 58.42) (xy 255.27 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beb81fe6-7c43-40b0-9546-dcb8ba157086")
+	)
+	(wire
+		(pts
 			(xy 46.99 173.99) (xy 73.66 173.99)
 		)
 		(stroke
@@ -4744,13 +4771,13 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 58.42) (xy 251.46 58.42)
+			(xy 46.99 128.27) (xy 46.99 129.54)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e103a584-6099-4a7e-87b9-dfdd79f14ef6")
+		(uuid "e3aeff9f-6432-49d6-a6d8-7489cd1bc2f9")
 	)
 	(wire
 		(pts
@@ -4804,7 +4831,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 171.45) (xy 121.92 171.45)
+			(xy 101.6 171.45) (xy 129.54 171.45)
 		)
 		(stroke
 			(width 0)
@@ -4831,6 +4858,16 @@
 			(type default)
 		)
 		(uuid "f1314339-237c-48ca-aad8-4f91940c7bd6")
+	)
+	(wire
+		(pts
+			(xy 44.45 129.54) (xy 46.99 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f20bab91-b730-465f-ae09-ac45d8cfc031")
 	)
 	(wire
 		(pts
@@ -5800,6 +5837,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 44.45 129.54 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "075b9cad-a571-4a77-9e6d-0746bbb2f59f")
+		(property "Reference" "#FLG0104"
+			(at 42.545 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 40.64 129.5399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 44.45 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 44.45 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5ccbf14b-8ca2-4b5a-8603-b5f1c817f75f")
+		)
+		(instances
+			(project "NosClock"
+				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
+					(reference "#FLG0104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 267.97 157.48 270)
 		(unit 1)
@@ -5933,6 +6049,39 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
+			(at 161.29 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 161.29 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 161.29 138.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
 			(at 161.29 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -7823,84 +7972,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 121.92 171.45 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "45213238-d1d7-40d4-9cbb-9018949081f3")
-		(property "Reference" "#FLG0104"
-			(at 121.92 169.545 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 121.92 166.37 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 121.92 171.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8d9cf988-f1dd-411f-a594-3c97bed2c5db")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#FLG0104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 149.86 35.56 0)
 		(unit 1)
@@ -9275,7 +9346,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 46.99 132.08 0)
+		(at 46.99 128.27 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9286,7 +9357,7 @@
 		(fields_autoplaced yes)
 		(uuid "7e0f1902-35f4-464f-a08e-1ad5174ab529")
 		(property "Reference" "#PWR0130"
-			(at 46.99 135.89 0)
+			(at 46.99 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9297,7 +9368,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 46.99 127 0)
+			(at 46.99 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9307,7 +9378,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 46.99 132.08 0)
+			(at 46.99 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9318,7 +9389,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 46.99 132.08 0)
+			(at 46.99 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9329,7 +9400,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 46.99 132.08 0)
+			(at 46.99 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12769,84 +12840,6 @@
 			(project "NosClock"
 				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
 					(reference "J102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 121.92 176.53 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f229bdfc-a390-42b4-8674-5ff07430c93b")
-		(property "Reference" "#FLG0105"
-			(at 121.92 178.435 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 121.92 181.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 121.92 176.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6bbbe512-4325-484e-b592-4e079aa7b490")
-		)
-		(instances
-			(project "NosClock"
-				(path "/5a46aee9-b968-477e-a4a1-4edba06163a3"
-					(reference "#FLG0105")
 					(unit 1)
 				)
 			)
