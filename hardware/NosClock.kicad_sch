@@ -830,7 +830,7 @@
 							)
 						)
 					)
-					(number "S1"
+					(number "SH"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3951,10 +3951,6 @@
 		(uuid "8d6faae0-01cb-4445-aab3-763928483052")
 	)
 	(no_connect
-		(at 231.14 59.69)
-		(uuid "b3ca857a-7111-4048-a170-2e2ebc03a66d")
-	)
-	(no_connect
 		(at 68.58 104.14)
 		(uuid "b9c253cd-c7a7-48ba-9f4f-5d4955cd3c54")
 	)
@@ -5262,7 +5258,7 @@
 	)
 	(global_label "USB_D+"
 		(shape input)
-		(at 255.27 48.26 0)
+		(at 255.27 45.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -5270,9 +5266,9 @@
 			)
 			(justify left)
 		)
-		(uuid "9b0d26c0-041f-4b68-bcc6-a34911807a27")
+		(uuid "9fc4bd74-75d6-49cc-a64f-b9d93362bb56")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 265.8752 48.26 0)
+			(at 265.8752 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5380,30 +5376,6 @@
 			)
 		)
 	)
-	(global_label "USB_D-"
-		(shape input)
-		(at 255.27 45.72 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "bd0c0711-74ce-427b-aac0-5bb913ff77ed")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 265.8752 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
 	(global_label "SCL"
 		(shape input)
 		(at 231.14 104.14 180)
@@ -5425,6 +5397,30 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+			)
+		)
+	)
+	(global_label "USB_D-"
+		(shape input)
+		(at 255.27 48.26 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d633642c-67a9-4c2c-bab4-f034d8b76a2b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 265.8752 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 			)
 		)
 	)
@@ -7353,7 +7349,7 @@
 				)
 			)
 		)
-		(pin "S1"
+		(pin "SH"
 			(uuid "91bce8c3-f943-4e22-a184-86af8178e232")
 		)
 		(pin "B5"
@@ -7770,7 +7766,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SDA/BOOT"
+		(property "Value" "SDA"
 			(at 240.538 148.59 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9762,7 +9758,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SCL"
+		(property "Value" "SCL/BOOT"
 			(at 240.538 153.67 90)
 			(show_name no)
 			(do_not_autoplace no)
