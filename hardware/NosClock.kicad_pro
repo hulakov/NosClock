@@ -495,7 +495,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [
-      "Eagle-and-KiCAD-Nixie-Libs"
+      "Eagle-and-KiCAD-Nixie-Libs",
+      "NosRadio",
+      "NosInputOutput"
     ],
     "pinned_symbol_libs": []
   },
