@@ -24,7 +24,6 @@ esp32:
   framework:
     type: esp-idf
 
-
 external_components:
   - source:
       type: git

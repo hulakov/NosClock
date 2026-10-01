@@ -1,4 +1,5 @@
 #pragma once
+#include <array>
 #include "esphome/core/component.h"
 #include "esphome/components/time/real_time_clock.h"
 #include "esphome/components/output/float_output.h"
@@ -15,11 +16,11 @@ class NosTubes {
   uint32_t get_3_digits(int d1, int d2, int d3);
   void shift_out_32(uint32_t data);
 
-  int m_last_hour = -1;
-  int m_last_minute = -1;
-  int m_last_second = -1;
+  std::array<int, 6> m_last_digits{-1, -1, -1, -1, -1, -1};
   bool m_last_enabled = false;
   float m_last_brightness = -1.0f;
+  uint32_t m_second_59_start_ms = 0;
+  bool m_was_rolling = false;
 };
 
 } // namespace nosclock
