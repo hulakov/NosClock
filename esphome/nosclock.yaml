@@ -6,9 +6,6 @@ esphome:
       then:
         - ds1307.read_time: rtc_time
         - logger.log: "Read RTC time"
-        - lambda: |-
-            nosclock_controller->setup_hardware(id(bus_i2c));
-            ESP_LOGI("main", "AW9523 and Shift Registers Initialized");
 
 
 esp32:
@@ -29,6 +26,12 @@ external_components:
 
 nosclock:
   id: nosclock_controller
+  i2c_id: bus_i2c
+  time_id: rtc_time
+  tubes_light: tubes_light
+  backlight_strip: backlight_strip
+  tubes_en: tubes_en
+  update_interval: 20ms
 
 # Enable logging
 logger:
@@ -185,26 +188,12 @@ binary_sensor:
     device_class: gas
     lambda: |-
       if (std::isnan(id(co2_sensor).state)) {
-        return {}; // Стан невідомий, якщо датчик ще не прогрівся
+        return {}; // Unknown state if sensor is warming up
       }
       if (id(co2_sensor).state >= 1500) {
-        return true;  // Перевищено поріг — вмикаємо алярм
+        return true;  // Threshold exceeded - trigger alert
       }
       if (id(co2_sensor).state <= 1400) {
-        return false; // Повітря чисте — вимикаємо
+        return false; // Air quality normal - clear alert
       }
-      return id(high_co2_alert).state; // В межах 1400-1500 зберігаємо попередній стан
-
-interval:
-  - interval: 20ms
-    then:
-      - lambda: |-
-          auto time_now = id(rtc_time).now();
-          if (time_now.is_valid()) {
-            nosclock_controller->update_clock(
-              time_now,
-              id(tubes_light),
-              id(backlight_strip),
-              id(tubes_en)
-            );
-          }
+      return id(high_co2_alert).state; // Hysteresis window (1400-1500 ppm) - retain previous state

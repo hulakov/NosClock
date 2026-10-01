@@ -29,18 +29,19 @@ static constexpr float DOTS_G_MAX_RAW = 4.0f;
 static constexpr float DOTS_B_MIN_RAW = 1.0f;
 static constexpr float DOTS_B_MAX_RAW = 7.0f;
 
-class NosController : public esphome::Component {
+class NosController : public esphome::PollingComponent {
  public:
+   NosController() : esphome::PollingComponent(20) {}
+
    void setup() override;
+   void update() override;
    void dump_config() override;
 
-   void setup_hardware(esphome::i2c::I2CBus *bus);
-   void update_clock(
-       esphome::ESPTime time_now,
-       esphome::light::LightState *tubes_light,
-       esphome::light::LightState *backlight_strip,
-       esphome::output::FloatOutput *tubes_en
-   );
+   void set_i2c_bus(esphome::i2c::I2CBus *bus) { m_i2c_bus = bus; }
+   void set_time(esphome::time::RealTimeClock *time) { m_time = time; }
+   void set_tubes_light(esphome::light::LightState *light) { m_tubes_light = light; }
+   void set_backlight_strip(esphome::light::LightState *strip) { m_backlight_strip = strip; }
+   void set_tubes_en(esphome::output::FloatOutput *out) { m_tubes_en = out; }
 
    void set_clock_enabled(bool enabled) { m_clock_enabled = enabled; }
    bool is_clock_enabled() const { return m_clock_enabled; }
@@ -50,6 +51,12 @@ class NosController : public esphome::Component {
    INosEffect &resolve_effect(const std::string &effect_name);
    void update_backlight(esphome::light::AddressableLight *addressable, esphome::light::LightColorValues color_values, esphome::ESPTime time_now, INosEffect &active_effect);
    void update_dots(esphome::light::LightColorValues dots_color_values, esphome::ESPTime time_now, INosEffect &active_effect);
+
+   esphome::i2c::I2CBus *m_i2c_bus = nullptr;
+   esphome::time::RealTimeClock *m_time = nullptr;
+   esphome::light::LightState *m_tubes_light = nullptr;
+   esphome::light::LightState *m_backlight_strip = nullptr;
+   esphome::output::FloatOutput *m_tubes_en = nullptr;
 
    NosTubes m_nos_tubes;
    Aw9523 m_aw9523;

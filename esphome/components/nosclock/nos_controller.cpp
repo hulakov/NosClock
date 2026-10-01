@@ -7,16 +7,14 @@ namespace nosclock {
 static const char *const TAG = "nosclock";
 
 void NosController::setup() {
-  // Empty, hardware is initialized dynamically via setup_hardware
+  m_nos_tubes.setup();
+  if (m_i2c_bus != nullptr) {
+    m_aw9523.setup(m_i2c_bus);
+  }
 }
 
 void NosController::dump_config() {
   ESP_LOGCONFIG(TAG, "NosClock Controller initialized");
-}
-
-void NosController::setup_hardware(esphome::i2c::I2CBus *bus) {
-  m_nos_tubes.setup();
-  m_aw9523.setup(bus);
 }
 
 INosEffect &NosController::resolve_effect(const std::string &effect_name) {
@@ -114,31 +112,31 @@ void NosController::update_dots(esphome::light::LightColorValues dots_color_valu
   }
 }
 
-void NosController::update_clock(
-    esphome::ESPTime time_now,
-    esphome::light::LightState *tubes_light,
-    esphome::light::LightState *backlight_strip,
-    esphome::output::FloatOutput *tubes_en
-) {
+void NosController::update() {
+  if (m_time == nullptr) return;
+
+  auto time_now = m_time->now();
+  if (!time_now.is_valid()) return;
+
   bool enabled = m_clock_enabled;
   float tubes_brightness = 0.0f;
-  if (tubes_light != nullptr) {
-    enabled = enabled && tubes_light->current_values.is_on();
-    tubes_brightness = tubes_light->current_values.get_brightness();
+  if (m_tubes_light != nullptr) {
+    enabled = enabled && m_tubes_light->current_values.is_on();
+    tubes_brightness = m_tubes_light->current_values.get_brightness();
   }
 
   // 1. Update Nixie tubes
-  m_nos_tubes.update(time_now, enabled, tubes_brightness, tubes_en);
+  m_nos_tubes.update(time_now, enabled, tubes_brightness, m_tubes_en);
 
   // 2. Resolve pointers and values
-  auto *addressable = (backlight_strip != nullptr) ? 
-    (esphome::light::AddressableLight *) backlight_strip->get_output() : nullptr;
+  auto *addressable = (m_backlight_strip != nullptr) ? 
+    (esphome::light::AddressableLight *) m_backlight_strip->get_output() : nullptr;
 
   esphome::light::LightColorValues color_values;
   std::string effect_name = "Solid";
-  if (backlight_strip != nullptr) {
-    color_values = backlight_strip->current_values;
-    std::string active_effect_name = backlight_strip->get_effect_name();
+  if (m_backlight_strip != nullptr) {
+    color_values = m_backlight_strip->current_values;
+    std::string active_effect_name = m_backlight_strip->get_effect_name();
     if (!active_effect_name.empty() && active_effect_name != "None") {
       effect_name = active_effect_name;
     }
