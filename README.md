@@ -2,14 +2,10 @@
 
 [![Support the project — monobank jar](https://img.shields.io/badge/Support%20the%20project-monobank%20jar-000000?style=for-the-badge&logo=buymeacoffee&logoColor=white)](https://send.monobank.ua/jar/8Sp4xhmNX3)
 
-**NosClock** is a smart 6-digit Nixie tube clock that seamlessly bridges **authentic retro aesthetics with cutting-edge modern electronics**. Powered by the **ESP32-C3** RISC-V microcontroller, it pairs iconic vintage **[IN-12 cold-cathode Nixie display tubes](https://s.click.aliexpress.com/e/_c3cIzvbx)** with state-of-the-art integrated circuits — including high-voltage shift register drivers, precision RTC timekeeping, addressable RGB LEDs, and expansion options for environmental sensors.
-
-By combining retro industrial charm with modern IoT capabilities, NosClock runs on **ESPHome** for native Home Assistant smart home automation, offering dynamic visual backlighting effects and customizable sensors.
-
-The custom hardware PCB was designed in **KiCad**, and the matching enclosure was designed in **Autodesk Fusion 360**. The hardware features an onboard 170V DC high-voltage boost converter, high-side anode switching, 32-channel shift register drivers, and efficient power regulation from a single 12V DC input.
+**NosClock** is a smart 6-digit Nixie tube clock. It combines vintage **[IN-12 Nixie tubes](https://s.click.aliexpress.com/e/_c3cIzvbx)** with modern electronics: an **ESP32-C3** microcontroller, flicker-free high-voltage drivers, a battery-backed real-time clock, and addressable RGB backlighting. It runs on **[ESPHome](https://esphome.io/)**, so you can control it from **[Home Assistant](https://www.home-assistant.io/)** and use it in [automations](#automation-ideas) (air raid alerts, high CO2 warnings, night mode).
 
 > [!CAUTION]
-> **HIGH VOLTAGE WARNING**: This hardware generates **170V DC** high voltage to power the Nixie tubes. High voltage can cause severe electric shock, serious injury, electrocution, or property damage. **Do not touch open PCB contacts or high-voltage nodes while powered.** Always ensure power is completely disconnected before touching, servicing, or modifying the hardware.
+> **HIGH VOLTAGE WARNING**: This clock generates **170V DC** to power the Nixie tubes. It can cause a severe electric shock or injury. **Do not touch the PCB while it is powered.** Always unplug the power before touching, servicing, or modifying the hardware.
 
 ![NosClock Assembly](images/clock.jpg)
 
@@ -18,69 +14,73 @@ The custom hardware PCB was designed in **KiCad**, and the matching enclosure wa
 ## ✨ Key Features
 
 - **Flicker-Free High-Voltage Shift Register Driving**:
-  Utilizes dedicated high-voltage shift register decoders (**HV5222PJ**) instead of traditional tube multiplexing. This eliminates high-frequency display flickering completely, significantly enhancing visual perception and comfort. Additionally, direct driving allows reaching ultra-low minimum tube brightness levels, perfect for an unobtrusive night mode.
+  Uses dedicated high-voltage shift register drivers (**[HV5222PJ](https://ww1.microchip.com/downloads/en/DeviceDoc/20005847A.pdf)**) instead of traditional tube multiplexing. This removes display flicker completely and allows very low tube brightness, perfect for an unobtrusive night mode.
 
-- **Dual RGB LEDs per Digit & Addressable RGB Colons**:
-  Each Nixie tube digit socket is illuminated by **two independent SK6812 MINI addressable RGB LEDs**, and every colon dot is also an RGB LED (4 colon dots driven via the **AW9523B** I2C driver). This dual-LED configuration unlocks rich visual lighting effects (*DigitSync*, *Aurora*, *Scanner*, *ProgressBar*) with fine-grained color control.
+- **Dual RGB LEDs per Digit & RGB Colons**:
+  Each Nixie tube is lit from below by **two [SK6812 MINI](https://mouser.com/datasheet/2/737/SK6812MINI_REV02_EN-1501726.pdf) addressable RGB LEDs**, and every colon dot is an RGB LED (4 dots driven by the **[AW9523B](https://www.awinic.com/en/product-detail/AW9523B)** I2C driver). This enables [effects](#home-assistant) like *DigitSync*, *Scanner*, *ScannerDual*, and *ScannerSplit*.
 
 - **Smart Home Integration (Home Assistant via ESPHome)**:
-  Full native ESPHome integration allows seamless remote control of tube brightness, backlighting colors, effects, and display power directly from Home Assistant. Enables powerful smart home automations such as:
-  - **Air Raid Alerts (Повітряна Тривога)** visual flashing notifications.
-  - **High CO2 Warnings** (automatic visual alert when indoor CO2 levels rise).
-  - **Night Mode Automation** (automatically reducing brightness during sleeping hours).
+  Control tube brightness, backlight colors, effects, and display power from [Home Assistant](#home-assistant), and use the clock in [automations](#automation-ideas).
 
 - **Dual Time Synchronization (NTP + Battery-Backed RTC)**:
-  Time is automatically synchronized via **NTP** over Wi-Fi whenever an internet connection is available. For offline reliability and power loss recovery, an onboard Real-Time Clock (**DS3231MZ / DS1307**) powered by a CR1220 backup battery maintains continuous timekeeping.
+  Time is synchronized via **[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol)** over Wi-Fi. When offline or after a power loss, the onboard Real-Time Clock (**[DS3231MZ](https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231M.pdf)**) with a CR1220 backup battery keeps the time.
 
-- **Expandable External I2C Sensor Interface**:
-  Features a dedicated onboard 4-pin I2C expansion connector (`J103`), enabling effortless connection of additional hardware sensors — such as the **Sensirion SCD4x** CO2, temperature, and humidity sensor module for real-time indoor air quality monitoring.
+- **Expandable I2C Sensor Interface**:
+  A 4-pin I2C connector (`J103`) lets you add sensors such as the **[Sensirion SCD4x](https://sensirion.com/media/documents/48C4B71E/66432D15/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf)** CO2, temperature, and humidity sensor.
 
 ---
 
-## Technical Specifications
+## 🔧 Technical Specifications
 
-### Custom PCB & Hardware Architecture
-
-NosClock is powered by a custom-designed printed circuit board (PCB) engineered in **KiCad**. The PCB integrates high-voltage boost conversion, high-side transistor switching, digital logic level conversion, addressable RGB backlighting, and sensor expansion onto a single compact board with optimized ground isolation.
+NosClock uses a custom 2-layer PCB (144 × 60 mm) designed in **[KiCad](https://www.kicad.org/)**, with an enclosure designed in **[Autodesk Fusion 360](https://www.autodesk.com/products/fusion-360)**. The board has an onboard 170V DC boost converter, 32-channel high-voltage shift register drivers, and power regulation from a single 12V DC input.
 
 ![NosClock Custom PCB](images/pcb.jpg)
 
-#### Component Breakdown
-
-- **Microcontroller**: Espressif [ESP32-C3-MINI-1](https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf) module (RISC-V 32-bit single-core CPU, 2.4GHz Wi-Fi 4, and Bluetooth 5 LE).
-- **Nixie Display Tubes**: 6x **[IN-12B](https://s.click.aliexpress.com/e/_c3cIzvbx)** cold-cathode Nixie tubes arranged in 3 multiplexed digit pairs with anti-ghosting pre-blanking timing and automatic slot-machine digit burn-in protection sweeps.
-- **High-Voltage Boost Supply**: Onboard step-up converter built around the [UC3843](https://www.ti.com/lit/ds/symlink/uc3843.pdf) current-mode PWM controller and [FQD12N20L](https://www.onsemi.com/pdf/datasheet/fqd12n20l-d.pdf) 200V N-channel MOSFET, converting 12V DC to **170V DC** for Nixie tube anodes.
+- **Microcontroller**: Espressif [ESP32-C3-MINI-1](https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf) module (RISC-V 32-bit single-core CPU, 2.4GHz Wi-Fi 4, Bluetooth 5 LE).
+- **Nixie Display Tubes**: 6x **[IN-12B](https://s.click.aliexpress.com/e/_c3cIzvbx)** cold-cathode Nixie tubes.
+- **High-Voltage Boost Supply**: Step-up converter built around the [UC3843](https://www.ti.com/lit/ds/symlink/uc3843.pdf) PWM controller and [FQD12N20L](https://www.onsemi.com/pdf/datasheet/fqd12n20l-d.pdf) 200V MOSFET, converting 12V DC to **170V DC** for the tube anodes.
 - **Low-Voltage Power Supply**:
-  - [MP2307](https://www.monolithicpower.com/en/documentview/productdocument/index/doc_url/%2Fm%2Fp%2Fmp2307_r1.9.pdf) 3A synchronous step-down buck converter stepping 12V DC input down to 5V DC.
-  - [AP7361-33](https://www.diodes.com/assets/Datasheets/AP7361.pdf) 1A low-dropout (LDO) linear regulator converting 5V DC to 3.3V DC for the ESP32-C3 MCU and digital logic.
+  - [MP2307](https://www.monolithicpower.com/en/documentview/productdocument/index/doc_url/%2Fm%2Fp%2Fmp2307_r1.9.pdf) 3A synchronous buck converter: 12V → 5V.
+  - [AP7361-33](https://www.diodes.com/assets/Datasheets/AP7361.pdf) 1A LDO regulator: 5V → 3.3V for the ESP32-C3 and logic.
 - **Display Driver & Logic**:
-  - 2x Microchip [HV5222PJ](https://ww1.microchip.com/downloads/en/DeviceDoc/20005847A.pdf) 32-channel high-voltage open-drain shift registers in PLCC-44 sockets.
-  - [CD4504](https://www.ti.com/lit/ds/symlink/cd4504b.pdf) CMOS hex voltage level shifter and [SN74LV1T34](https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf) logic buffer.
-- **Timekeeping**: High-precision [DS3231MZ](https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231M.pdf) / DS1307 I2C Real-Time Clock with CR1220 coin cell battery backup and automatic NTP synchronization.
-- **Environmental Sensors**:
-  - Sensirion [SCD4x / SCD41](https://sensirion.com/media/documents/48C4B71E/66432D15/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf) photoacoustic CO2, temperature, and relative humidity sensor (I2C address `0x62`).
-  - Dallas [DS18B20](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) 1-Wire digital temperature sensor on GPIO2.
-- **RGB Underlighting**: 12x [SK6812MINI](https://mouser.com/datasheet/2/737/SK6812MINI_REV02_EN-1501726.pdf) addressable RGB LEDs under Nixie tube sockets, supplemented by 4x RGB colon LEDs driven by an [AW9523B](https://www.awinic.com/en/product-detail/AW9523B) 16-channel I2C LED driver.
-- **User Interface Controls**: Physical multi-gesture push button on GPIO20 supporting single-click, double-click, and long-press interactions.
+  - 2x Microchip [HV5222PJ](https://ww1.microchip.com/downloads/en/DeviceDoc/20005847A.pdf) 32-channel high-voltage shift registers in PLCC-44 sockets.
+  - [CD4504](https://www.ti.com/lit/ds/symlink/cd4504b.pdf) CMOS hex level shifter and [SN74LV1T34](https://www.ti.com/lit/ds/symlink/sn74lv1t34.pdf) logic buffer.
+- **Timekeeping**: [DS3231MZ](https://www.analog.com/media/en/technical-documentation/data-sheets/DS3231M.pdf) I2C Real-Time Clock with CR1220 battery backup and NTP synchronization.
+- **Sensors**:
+  - Sensirion [SCD4x / SCD41](https://sensirion.com/media/documents/48C4B71E/66432D15/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf) CO2, temperature, and humidity sensor (optional, I2C address `0x62`).
+  - Dallas [DS18B20](https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf) 1-Wire temperature sensor on GPIO2.
+- **RGB Backlight**: 12x [SK6812MINI](https://mouser.com/datasheet/2/737/SK6812MINI_REV02_EN-1501726.pdf) addressable RGB LEDs under the tubes, plus 4x RGB colon LEDs driven by an [AW9523B](https://www.awinic.com/en/product-detail/AW9523B) I2C LED driver.
+- **Button**: push button on GPIO21 (toggles the display on/off).
 - **Power & Connectivity**:
-  - 12V DC power input via 2-pin JST-XH terminal (`J104`).
-  - USB-C connector (`J101`) for power and serial programming.
-- **Enclosure**: Custom protective enclosure designed in **Autodesk Fusion 360** tailored specifically for the PCB dimensions and IN-12 Nixie tube arrangement.
+  - 12V DC input via 2-pin JST-XH connector (`J104`), see [power adapter](#you-will-also-need).
+  - USB-C connector (`J101`) for flashing the firmware.
+
+Schematics and PCB layout (KiCad): [`hardware/`](hardware/).
 
 ---
 
-## 🛒 Where to Buy (AliExpress Shopping List)
+## 🛠️ How to Build Your Own NosClock
 
-Quantities are taken from the NosClock PCB interactive BOM. Prices are in USD, checked on 2026-09-23. They are item prices only: shipping depends on your country and is not included.
+1. [Order the components](#step-1--order-the-components)
+2. [Order the PCB](#step-2--order-the-pcb)
+3. [Solder the board](#step-3--solder-the-board) *(guide coming soon)*
+4. [3D-print the enclosure](#step-4--3d-print-the-enclosure)
+5. [Flash the firmware](#step-5--flash-the-firmware)
+6. [Use your clock](#step-6--use-your-clock)
 
-- **Needed**: how many parts are placed on the board.
+---
+
+### Step 1 — Order the components
+
+Prices are in USD, checked on 2026-09-23. They are item prices only: shipping depends on your country and is not included.
+
+- **Needed**: how many parts go on the board.
 - **Order**: how many lots to buy × pieces per lot (sellers often sell only in packs of 2, 5, 10, etc.).
 - **Total**: lot price × number of lots.
 
-> **Note:** AliExpress prices change often, and listings can be removed or go out of stock. If a link is broken or a part is unavailable, please open an issue so the list can be updated.
+> **Note:** AliExpress prices change often, and listings can be removed or go out of stock. If a link is broken or a part is unavailable, please [open an issue](https://github.com/hulakov/NosClock/issues) so the list can be updated.
 
-
-### Nixie Tubes
+#### Nixie Tubes
 
 | Part | Needed | Order | Lot Price | Total | Link |
 |---|---|---|---|---|---|
@@ -88,8 +88,7 @@ Quantities are taken from the NosClock PCB interactive BOM. Prices are in USD, c
 
 **Nixie tubes total: $102.60**
 
-
-### Components
+#### Components
 
 | # | Part | Reference | Needed | Order | Lot Price | Total | Link |
 |---|---|---|---|---|---|---|---|
@@ -129,8 +128,7 @@ Quantities are taken from the NosClock PCB interactive BOM. Prices are in USD, c
 
 **Components total: $79.58**
 
-
-### Grand Total
+#### Grand Total
 
 | | Total |
 |---|---|
@@ -138,82 +136,140 @@ Quantities are taken from the NosClock PCB interactive BOM. Prices are in USD, c
 | Components | $79.58 |
 | **Grand total (excluding shipping)** | **$182.18** |
 
----
+#### You will also need
 
-## 📁 Repository Structure
-
-```
-NosClock/
-├── esphome/                     # ESPHome configuration & native custom component
-│   ├── nosclock.yaml            # Main ESPHome YAML configuration file
-│   └── components/
-│       └── nosclock/            # C++ custom component for Nixie mux & LED effects
-└── hardware/                    # KiCad 8 project files & manufacturing outputs
-    ├── NosClock.kicad_pro       # KiCad main project file
-    ├── NosClock.kicad_sch       # Root schematic sheet
-    ├── NosClock.kicad_pcb       # Complete multi-layer PCB layout
-    ├── production/              # Manufacturing files (BOM, positions, Gerber ZIP)
-    └── bom/                     # Interactive HTML Bill of Materials (iBOM)
-```
+- A **12 V DC power adapter** (at least 1 A). Connect it to the JST XH connector from [row 20](#components).
+- A **CR1220 coin cell battery** for the [clock backup](#-technical-specifications) (keeps the time when the power is off).
+- A **USB-C data cable** for flashing the firmware (a charge-only cable will not work).
+- *(Optional)* A **Sensirion SCD41** module with a 4-pin PicoBlade 1.25 mm cable if you want CO2, temperature and humidity readings ([datasheet](https://sensirion.com/media/documents/48C4B71E/66432D15/Sensirion_CO2_Sensors_SCD4x_Datasheet.pdf)). It plugs into `J103`.
 
 ---
 
-## 🚀 Firmware Deployment & Operation
+### Step 2 — Order the PCB
 
-NosClock runs on **ESPHome**, featuring a native custom C++ component in `esphome/components/nosclock` that seamlessly integrates the Nixie display multiplexing, addressable RGB LED effects, and sensors directly into Home Assistant.
+The PCB is ordered as a bare board (no parts soldered). You solder the components from [Step 1](#step-1--order-the-components) yourself ([Step 3](#step-3--solder-the-board)).
 
-### Features exposed in Home Assistant:
-- **Display Effect (`select`)**: Choose LED underlighting effects (`Empty`, `Solid`, `Aurora`, `DigitSync`, `Scanner`, `ProgressBar`).
-- **Display Color (`select`)**: Choose active LED color (`Red`, `Green`, `Blue`, `Yellow`, `Cyan`, `Magenta`, `White`).
-- **Tubes Brightness (`number`)**: Adjust Nixie tube display brightness (10% to 100%).
-- **Effect Brightness (`number`)**: Adjust RGB LED underlighting brightness (0% to 100%).
-- **Enabled (`switch`)**: Toggle Nixie display power on/off.
-- **High CO2 Alert (`binary_sensor`)**: Automated gas alarm state triggered when CO2 exceeds 1500 ppm.
-- **Sensors**: Ambient Temperature, Ambient Humidity, CO2 (SCD4x), and Temperature (DS18B20).
+1. Download the Gerber file: **[NosClock.zip](hardware/production/NosClock.zip)**. Do not unzip it.
+2. Open [jlcpcb.com](https://jlcpcb.com/) and click **Add gerber file**. Upload `NosClock-gerber.zip`.
+3. JLCPCB reads most settings from the file. Check that they look like this:
+
+   | Setting | Value |
+   |---|---|
+   | Base Material | FR-4 |
+   | Layers | 2 |
+   | Dimensions | 144 × 60 mm (filled in automatically) |
+   | PCB Qty | 5 (the minimum order) |
+   | PCB Thickness | 1.6 mm |
+   | PCB Color | any color you like |
+   | Surface Finish | HASL (lead-free) or ENIG. ENIG is flatter and makes the small chips easier to solder |
+   | PCB Assembly | **off** |
+
+4. *(Optional, recommended)* Turn on **SMT Stencil**. A stencil makes it much easier to apply solder paste to the small chips.
+5. Click **Save to Cart**, then check out and pick a shipping method.
+
+---
+
+### Step 3 — Solder the board
+
+> [!NOTE]
+> **A detailed step-by-step soldering guide is coming soon.**
+
+The [interactive BOM](hardware/bom/ibom.html) shows where each part goes on the board. Download the file and open it in your browser.
+
+---
+
+### Step 4 — 3D-print the enclosure
+
+1. Download the STL files from the [`enclosure/`](enclosure/) folder.
+2. Print them with **PLA** or **PETG**. A 0.2 mm layer height works well.
+3. Put the soldered board with the tubes into the enclosure.
+
+---
+
+### Step 5 — Flash the firmware
+
+The clock runs on **[ESPHome](https://esphome.io/)**. The easiest way to flash it is with the **[ESPHome Device Builder](https://esphome.io/guides/getting_started_hassio/)** add-on in [Home Assistant](https://www.home-assistant.io/). You only need a USB cable for the first flash. After that, updates install over Wi-Fi.
+
+#### 5.1 Install ESPHome Device Builder
+
+1. [Open the ESPHome Device Builder add-on in your Home Assistant](https://my.home-assistant.io/redirect/supervisor_addon/?addon=5c53de3b_esphome&repository_url=https%3A%2F%2Fgithub.com%2Fesphome%2Fhome-assistant-addon) (or go to **Settings → Add-ons → Add-on Store** and find **ESPHome Device Builder**).
+2. Click **Install**, then **Start**, then **Open Web UI**.
+
+#### 5.2 Add the NosClock configuration
+
+1. In ESPHome Device Builder, click **Secrets** (top-right corner) and add these lines with your own values:
+   ```yaml
+   wifi_ssid: "Your_WiFi_Name"
+   wifi_password: "Your_WiFi_Password"
+   nosclock_ap_password: "Any_Password_For_Fallback_Hotspot"
+   nosclock_api_key: "Your_API_Encryption_Key"
+   nosclock_ota_password: "Any_Password_For_Updates"
+   ```
+   To get `nosclock_api_key`, open the [ESPHome API page](https://esphome.io/components/api.html#configuration-variables). It generates a random key for you. Copy the key and save it somewhere, because you will need it again in [step 5.4](#54-add-the-clock-to-home-assistant).
+2. Click **+ New Device** → **Continue** → enter the name `nosclock` → choose **ESP32-C3** → **Skip**.
+3. On the new `nosclock` card, click **Edit**. Delete everything in the file and paste the contents of [`esphome/nosclock.yaml`](esphome/nosclock.yaml). Click **Save**.
+4. *(Optional)* In the file, change `timezone: "Europe/Kiev"` to [your time zone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) and `altitude_compensation: 180m` to your altitude.
+
+#### 5.3 Flash over USB (first time only)
+
+1. On the `nosclock` card, click **⋮ → Install → Manual download**. Wait for the build to finish (the first build takes a few minutes), then choose **Factory format** to download the `.bin` file.
+2. Connect the clock to your computer with the USB-C cable.
+3. Open [web.esphome.io](https://web.esphome.io) in **Chrome** or **Edge**. Click **Connect** and select the clock's serial port.
+4. Click **Install**, select the downloaded `.bin` file, and wait until it finishes.
+
+#### 5.4 Add the clock to Home Assistant
+
+1. Unplug the USB cable and power the clock from the [12 V adapter](#you-will-also-need). It connects to your Wi-Fi.
+2. In Home Assistant, go to **[Settings → Devices & services](https://my.home-assistant.io/redirect/integrations/)**. You will see **NosClock** as a discovered device. Click **Configure**.
+3. When it asks for the encryption key, paste your `nosclock_api_key` from [step 5.2](#52-add-the-nosclock-configuration).
+
+To install future updates, click **⋮ → Install → Wirelessly** on the `nosclock` card. You do not need the USB cable anymore.
+
+> [!TIP]
+> If the clock cannot connect to your Wi-Fi (for example, the password is wrong), it creates its own Wi-Fi network called **NosClock Fallback Hotspot**. Connect to it with your `nosclock_ap_password`. A page opens where you can choose your Wi-Fi network.
+
+<details>
+<summary>Advanced: flash with the ESPHome command line instead</summary>
+
+1. [Install ESPHome](https://esphome.io/guides/installing_esphome/): `pip install esphome`
+2. Clone [this repository](https://github.com/hulakov/NosClock) and create `esphome/secrets.yaml` with the same lines as in [step 5.2](#52-add-the-nosclock-configuration).
+3. Connect the clock via USB-C and run:
+   ```bash
+   esphome run esphome/nosclock.yaml
+   ```
+</details>
+
+---
+
+### Step 6 — Use your clock
+
+The clock gets the time from the internet over Wi-Fi. When there is no internet, it keeps time with its built-in battery-backed clock.
+
+#### Button
+
+- **Press**: turns the tubes and the backlight on or off.
+
+#### Home Assistant
+
+Go to **[Settings → Devices & services](https://my.home-assistant.io/redirect/integrations/) → ESPHome → NosClock** to control the clock:
+
+- **Tubes** (light): turn the tubes on or off and set their brightness.
+- **Backlight** (light): the color and brightness of the RGB lights under the tubes.
+- **Dots** (light): the color and brightness of the colon dots.
+- **Display Effect** (select): the backlight effect. The options are `Solid`, `Static`, `DigitSync`, `Scanner`, `ScannerDual`, `ScannerSplit`, and `Cycle`.
+- **Sensors**: Temperature. With the [optional SCD41 module](#you-will-also-need) you also get CO2, Ambient Temperature, Ambient Humidity, and **High CO2 Alert** (turns on above 1500 ppm).
+
+You can also open the clock's web page at [http://nosclock.local](http://nosclock.local).
 
 ![Home Assistant Integration](images/home-assistant.jpg)
 
 ![ESPHome Controls](images/esphome.jpg)
 
-### Flashing via ESPHome:
-1. Create a `secrets.yaml` file in your ESPHome directory containing:
-   ```yaml
-   wifi_ssid: "Your_WiFi_SSID"
-   wifi_password: "Your_WiFi_Password"
-   wifi_fallback_password: "Fallback_AP_Password"
-   nosclock_api_key: "Your_HA_API_Encryption_Key"
-   nosclock_ota_password: "Your_OTA_Password"
-   ```
-2. Flash the firmware using the ESPHome CLI:
-   ```bash
-   esphome run esphome/nosclock.yaml
-   ```
+#### Automation ideas
 
----
-
-## 🔘 Physical Multi-Button Controls
-
-The onboard physical push-button connected to **GPIO20** (`clock_button`) handles gesture inputs:
-
-- **Single Click** (`< 0.5s`): Advances to the next LED effect mode (`DigitSync` ➔ `Scanner` ➔ `Aurora`, etc.).
-- **Double Click**: Advances to the next LED background color.
-- **Long Press** (`≥ 1.0s`): Toggles the Nixie display power ON or OFF.
-
----
-
-## 📐 Hardware Schematics & PCB Design
-
-Designed using **KiCad**, the hardware is split into modular schematic sheets:
-
-- [NosClock.kicad_sch](file:///c:/Users/vadym/src/NosClock/hardware/NosClock.kicad_sch) — Top-level system interconnects and MCU pin mapping.
-- `ThreeDigits.kicad_sch` — Shift register digit mapping and multiplexing matrix.
-- `Lamps.kicad_sch` — Anode switching and lamp driver stages.
-- `HighSideSwitch.kicad_sch` — High-side PNP transistor switches for anode multiplexing.
-- `UC3843.kicad_sch` — 170V DC Boost converter power stage.
-- `MP2307.kicad_sch` — 12V to 5V DC-DC buck converter circuit.
-- `Colons.kicad_sch` — PWM colon dimming circuit.
-
-Interactive assembly BOM is available in [hardware/bom/ibom.html](file:///c:/Users/vadym/src/NosClock/hardware/bom/ibom.html).
+- **Air raid alerts (Повітряна тривога)**: install the [NosAlert](https://github.com/hulakov/NosAlert) integration and [create an automation](https://www.home-assistant.io/docs/automation/basics/) that changes the backlight color or effect when an alert starts in your region.
+- **Night mode**: lower the tube brightness at night and turn it back up in the morning.
+- **High CO2 warning**: flash the backlight red when **High CO2 Alert** turns on.
 
 ---
 
