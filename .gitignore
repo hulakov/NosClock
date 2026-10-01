@@ -5,3 +5,4 @@
 /hardware/NosClock.step
 .history
 .bak
+/esphome/components/nosclock/__pycache__/

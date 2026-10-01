@@ -27,10 +27,17 @@ esp32:
   framework:
     type: esp-idf
 
+
 external_components:
   - source:
-      type: local
-      path: components
+      type: git
+      url: https://github.com/hulakov/NosClock
+      ref: master
+      path: esphome/components
+    components: [nosclock]
+  # - source:
+  #     type: local
+  #     path: components
 
 nosclock:
   id: nosclock_controller
@@ -228,6 +235,17 @@ select:
     optimistic: true
     restore_value: true
 
+  - platform: template
+    name: "Dots Mode"
+    id: dots_mode_selector
+    options:
+      - "Blink"
+      - "On"
+      - "Off"
+    initial_option: "Blink"
+    optimistic: true
+    restore_value: true
+
 interval:
   - interval: 20ms
     then:
@@ -240,6 +258,7 @@ interval:
               id(backlight_strip),
               id(dots_light),
               id(tubes_en),
-              id(effect_selector).current_option()
+              id(effect_selector).current_option(),
+              id(dots_mode_selector).current_option()
             );
           }

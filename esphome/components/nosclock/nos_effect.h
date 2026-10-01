@@ -9,7 +9,13 @@ static constexpr size_t NUM_DIGITS = 6;
 static constexpr size_t NUM_LEDS = 12;
 static constexpr size_t NUM_DOTS = 4;
 static constexpr uint32_t BLINK_INTERVAL_MS = 500;
-static constexpr float DOTS_BRIGHTNESS_LIMIT = 0.5f;
+static constexpr float DOTS_BRIGHTNESS_LIMIT = 0.2f;
+
+enum class DotsMode : uint8_t {
+  BLINK = 0,
+  ON = 1,
+  OFF = 2
+};
 
 class INosEffect {
  public:

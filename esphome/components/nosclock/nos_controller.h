@@ -28,13 +28,23 @@ class NosController : public esphome::Component {
        esphome::light::LightState *backlight_strip,
        esphome::light::LightState *dots_strip,
        esphome::output::FloatOutput *tubes_en,
-       const std::string &effect_name
+       const std::string &effect_name,
+       DotsMode dots_mode = DotsMode::BLINK
+   );
+   void update_clock(
+       esphome::ESPTime time_now,
+       esphome::light::LightState *tubes_light,
+       esphome::light::LightState *backlight_strip,
+       esphome::light::LightState *dots_strip,
+       esphome::output::FloatOutput *tubes_en,
+       const std::string &effect_name,
+       const std::string &dots_mode_str
    );
 
  private:
    INosEffect &resolve_effect(const std::string &effect_name);
    void update_backlight(esphome::light::AddressableLight *addressable, esphome::light::LightColorValues color_values, esphome::ESPTime time_now, INosEffect &active_effect);
-   void update_dots(esphome::light::LightColorValues dots_color_values, esphome::ESPTime time_now, INosEffect &active_effect);
+   void update_dots(esphome::light::LightColorValues dots_color_values, esphome::ESPTime time_now, INosEffect &active_effect, DotsMode dots_mode);
 
    NosTubes m_nos_tubes;
    Aw9523 m_aw9523;
