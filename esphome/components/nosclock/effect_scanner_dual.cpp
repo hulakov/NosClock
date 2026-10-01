@@ -43,10 +43,10 @@ void ScannerDualEffect::update_position() {
   }
 }
 
-std::array<esphome::Color, NUM_LEDS> ScannerDualEffect::apply_backlight(esphome::ESPTime time_now, esphome::Color target_color) {
+std::array<ColorFloat, NUM_LEDS> ScannerDualEffect::apply_backlight(esphome::ESPTime time_now, ColorFloat target_color) {
   update_position();
 
-  std::array<esphome::Color, NUM_LEDS> res{};
+  std::array<ColorFloat, NUM_LEDS> res{};
   float width = 1.2f;
 
   for (int i = 0; i < 8; i++) {
@@ -59,14 +59,14 @@ std::array<esphome::Color, NUM_LEDS> ScannerDualEffect::apply_backlight(esphome:
       size_t idx1 = group.hardware_index_1;
       size_t idx2 = group.hardware_index_2;
       if (idx1 < NUM_LEDS) {
-        res[idx1] = esphome::Color(
+        res[idx1] = ColorFloat(
           target_color.r * intensity,
           target_color.g * intensity,
           target_color.b * intensity
         );
       }
       if (idx2 < NUM_LEDS) {
-        res[idx2] = esphome::Color(
+        res[idx2] = ColorFloat(
           target_color.r * intensity,
           target_color.g * intensity,
           target_color.b * intensity
@@ -77,10 +77,10 @@ std::array<esphome::Color, NUM_LEDS> ScannerDualEffect::apply_backlight(esphome:
   return res;
 }
 
-std::array<esphome::Color, NUM_DOTS> ScannerDualEffect::apply_dots(esphome::ESPTime time_now, esphome::Color target_color) {
+std::array<ColorFloat, NUM_DOTS> ScannerDualEffect::apply_dots(esphome::ESPTime time_now, ColorFloat target_color) {
   update_position();
 
-  std::array<esphome::Color, NUM_DOTS> res{};
+  std::array<ColorFloat, NUM_DOTS> res{};
   float width = 1.2f;
 
   for (int i = 0; i < 8; i++) {
@@ -93,14 +93,14 @@ std::array<esphome::Color, NUM_DOTS> ScannerDualEffect::apply_dots(esphome::ESPT
       size_t idx1 = group.hardware_index_1;
       size_t idx2 = group.hardware_index_2;
       if (idx1 < NUM_DOTS) {
-        res[idx1] = esphome::Color(
+        res[idx1] = ColorFloat(
           target_color.r * intensity,
           target_color.g * intensity,
           target_color.b * intensity
         );
       }
       if (idx2 < NUM_DOTS) {
-        res[idx2] = esphome::Color(
+        res[idx2] = ColorFloat(
           target_color.r * intensity,
           target_color.g * intensity,
           target_color.b * intensity

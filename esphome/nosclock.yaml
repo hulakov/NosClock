@@ -12,14 +12,11 @@ esphome:
     - priority: -100
       then:
         - lambda: |-
-            id(backlight_strip).make_call().set_effect("NosClock").perform();
-            // Align backlight and dots state with clock enabled state after components have restored their states
+            // Align backlight state with clock enabled state after components have restored their states
             if (id(tubes_light)->remote_values.is_on()) {
               id(backlight_strip).make_call().set_state(true).perform();
-              id(dots_light).make_call().set_state(true).perform();
             } else {
               id(backlight_strip).make_call().set_state(false).perform();
-              id(dots_light).make_call().set_state(false).perform();
             }
 
 esp32:
@@ -113,22 +110,6 @@ output:
     write_action:
       - lambda: ""
 
-  - platform: template
-    id: dots_color_red
-    type: float
-    write_action:
-      - lambda: ""
-  - platform: template
-    id: dots_color_green
-    type: float
-    write_action:
-      - lambda: ""
-  - platform: template
-    id: dots_color_blue
-    type: float
-    write_action:
-      - lambda: ""
-
 light:
   - platform: monochromatic
     name: "Tubes"
@@ -146,20 +127,36 @@ light:
     chipset: WS2812
     default_transition_length: 0s
     restore_mode: RESTORE_DEFAULT_ON
+    gamma_correct: 0.0
     effects:
+      # Solid backlight color with dots blinking every second
       - addressable_lambda:
-          name: "NosClock"
-          update_interval: 1000s
+          name: "Solid"
           lambda: ""
-
-  - platform: rgb
-    name: "Dots"
-    id: dots_light
-    red: dots_color_red
-    green: dots_color_green
-    blue: dots_color_blue
-    default_transition_length: 0s
-    restore_mode: RESTORE_DEFAULT_ON
+      # Completely static backlight and dots without blinking
+      - addressable_lambda:
+          name: "Static"
+          lambda: ""
+      # Backlight color synchronized with time digits using a palette (dots blink)
+      - addressable_lambda:
+          name: "DigitSync"
+          lambda: ""
+      # Sequential scanner animation travelling across all digits and dots
+      - addressable_lambda:
+          name: "Scanner"
+          lambda: ""
+      # Dual scanner animation travelling across pairs of digits and dots
+      - addressable_lambda:
+          name: "ScannerDual"
+          lambda: ""
+      # Circular split scanner animation running in a loop across top and bottom LEDs
+      - addressable_lambda:
+          name: "ScannerSplit"
+          lambda: ""
+      # Solid backlight with both backlight and dots blinking every second
+      - addressable_lambda:
+          name: "Cycle"
+          lambda: ""
 
 
 sensor:
@@ -196,11 +193,9 @@ binary_sensor:
           if (id(tubes_light)->remote_values.is_on()) {
             id(tubes_light).make_call().set_state(false).perform();
             id(backlight_strip).make_call().set_state(false).perform();
-            id(dots_light).make_call().set_state(false).perform();
           } else {
             id(tubes_light).make_call().set_state(true).perform();
             id(backlight_strip).make_call().set_state(true).perform();
-            id(dots_light).make_call().set_state(true).perform();
           }
 
   - platform: template
@@ -219,33 +214,6 @@ binary_sensor:
       }
       return id(high_co2_alert).state; // В межах 1400-1500 зберігаємо попередній стан
 
-select:
-  - platform: template
-    name: "Display Effect"
-    id: effect_selector
-    options:
-      - "Solid"
-      - "Static"
-      - "DigitSync"
-      - "Scanner"
-      - "ScannerDual"
-      - "ScannerSplit"
-      - "Cycle"
-    initial_option: "Solid"
-    optimistic: true
-    restore_value: true
-
-  - platform: template
-    name: "Dots Mode"
-    id: dots_mode_selector
-    options:
-      - "Blink"
-      - "On"
-      - "Off"
-    initial_option: "Blink"
-    optimistic: true
-    restore_value: true
-
 interval:
   - interval: 20ms
     then:
@@ -256,9 +224,6 @@ interval:
               time_now,
               id(tubes_light),
               id(backlight_strip),
-              id(dots_light),
-              id(tubes_en),
-              id(effect_selector).current_option(),
-              id(dots_mode_selector).current_option()
+              id(tubes_en)
             );
           }

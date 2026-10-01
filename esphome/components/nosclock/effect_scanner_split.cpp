@@ -45,10 +45,10 @@ void ScannerSplitEffect::update_position() {
   }
 }
 
-std::array<esphome::Color, NUM_LEDS> ScannerSplitEffect::apply_backlight(esphome::ESPTime time_now, esphome::Color target_color) {
+std::array<ColorFloat, NUM_LEDS> ScannerSplitEffect::apply_backlight(esphome::ESPTime time_now, ColorFloat target_color) {
   update_position();
 
-  std::array<esphome::Color, NUM_LEDS> res{};
+  std::array<ColorFloat, NUM_LEDS> res{};
   float width = 1.5f;
 
   for (int i = 0; i < 16; i++) {
@@ -64,7 +64,7 @@ std::array<esphome::Color, NUM_LEDS> ScannerSplitEffect::apply_backlight(esphome
       float intensity = 1.0f - (distance / width);
       size_t idx = elem.hardware_index;
       if (idx < NUM_LEDS) {
-        res[idx] = esphome::Color(
+        res[idx] = ColorFloat(
           target_color.r * intensity,
           target_color.g * intensity,
           target_color.b * intensity
@@ -75,10 +75,10 @@ std::array<esphome::Color, NUM_LEDS> ScannerSplitEffect::apply_backlight(esphome
   return res;
 }
 
-std::array<esphome::Color, NUM_DOTS> ScannerSplitEffect::apply_dots(esphome::ESPTime time_now, esphome::Color target_color) {
+std::array<ColorFloat, NUM_DOTS> ScannerSplitEffect::apply_dots(esphome::ESPTime time_now, ColorFloat target_color) {
   update_position();
 
-  std::array<esphome::Color, NUM_DOTS> res{};
+  std::array<ColorFloat, NUM_DOTS> res{};
   float width = 1.5f;
 
   for (int i = 0; i < 16; i++) {
@@ -94,7 +94,7 @@ std::array<esphome::Color, NUM_DOTS> ScannerSplitEffect::apply_dots(esphome::ESP
       float intensity = 1.0f - (distance / width);
       size_t idx = elem.hardware_index;
       if (idx < NUM_DOTS) {
-        res[idx] = esphome::Color(
+        res[idx] = ColorFloat(
           target_color.r * intensity,
           target_color.g * intensity,
           target_color.b * intensity

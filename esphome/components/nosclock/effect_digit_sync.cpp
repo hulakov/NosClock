@@ -1,5 +1,6 @@
 #include "effect_digit_sync.h"
 #include <algorithm>
+#include <cmath>
 
 namespace nosclock {
 
@@ -28,65 +29,41 @@ static uint8_t get_clock_digit(esphome::ESPTime time_now, int index) {
   }
 }
 
-std::array<esphome::Color, NUM_LEDS> DigitSyncEffect::apply_backlight(esphome::ESPTime time_now, esphome::Color target_color) {
-  float brightness = std::max({target_color.r, target_color.g, target_color.b, (uint8_t)1}) / 255.0f;
-  std::array<esphome::Color, NUM_LEDS> res;
+std::array<ColorFloat, NUM_LEDS> DigitSyncEffect::apply_backlight(esphome::ESPTime time_now, ColorFloat target_color) {
+  std::array<ColorFloat, NUM_LEDS> res;
 
   for (size_t i = 0; i < 6; i++) {
     uint8_t digit = get_clock_digit(time_now, i);
-    res[i * 2] = esphome::Color(
-      PALETTE[digit].r * brightness,
-      PALETTE[digit].g * brightness,
-      PALETTE[digit].b * brightness
-    );
-    res[i * 2 + 1] = esphome::Color(
-      PALETTE[(digit + 1) % 10].r * brightness,
-      PALETTE[(digit + 1) % 10].g * brightness,
-      PALETTE[(digit + 1) % 10].b * brightness
-    );
+    res[i * 2] = ColorFloat(PALETTE[digit]);
+    res[i * 2 + 1] = ColorFloat(PALETTE[(digit + 1) % 10]);
   }
   return res;
 }
 
-std::array<esphome::Color, NUM_DOTS> DigitSyncEffect::apply_dots(esphome::ESPTime time_now, esphome::Color target_color) {
-  std::array<esphome::Color, NUM_DOTS> res{};
+std::array<ColorFloat, NUM_DOTS> DigitSyncEffect::apply_dots(esphome::ESPTime time_now, ColorFloat target_color) {
+  std::array<ColorFloat, NUM_DOTS> res{};
   if (time_now.second % 2 != 0) return res;
 
-  float brightness = std::max({target_color.r, target_color.g, target_color.b, (uint8_t)1}) / 255.0f;
+  float r_sum = 0.0f, g_sum = 0.0f, b_sum = 0.0f;
+  for (int i = 0; i < 6; i++) {
+    uint8_t digit = get_clock_digit(time_now, i);
+    ColorFloat c_top(PALETTE[digit]);
+    ColorFloat c_bot(PALETTE[(digit + 1) % 10]);
 
-  // Dot 0 & 1 are between Digit 1 and Digit 2
-  uint8_t d1 = get_clock_digit(time_now, 1);
-  uint8_t d2 = get_clock_digit(time_now, 2);
-  esphome::Color c1_top = PALETTE[d1];
-  esphome::Color c1_bot = PALETTE[(d1 + 1) % 10];
-  esphome::Color c2_top = PALETTE[d2];
-  esphome::Color c2_bot = PALETTE[(d2 + 1) % 10];
+    r_sum += c_top.r + c_bot.r;
+    g_sum += c_top.g + c_bot.g;
+    b_sum += c_top.b + c_bot.b;
+  }
 
-  esphome::Color color_dots_12(
-    (uint8_t)(((int)c1_top.r + (int)c1_bot.r + (int)c2_top.r + (int)c2_bot.r) / 4 * brightness),
-    (uint8_t)(((int)c1_top.g + (int)c1_bot.g + (int)c2_top.g + (int)c2_bot.g) / 4 * brightness),
-    (uint8_t)(((int)c1_top.b + (int)c1_bot.b + (int)c2_top.b + (int)c2_bot.b) / 4 * brightness)
+  ColorFloat unified_color(
+    r_sum / 12.0f,
+    g_sum / 12.0f,
+    b_sum / 12.0f
   );
 
-  res[0] = color_dots_12;
-  res[1] = color_dots_12;
-
-  // Dot 2 & 3 are between Digit 3 and Digit 4
-  uint8_t d3 = get_clock_digit(time_now, 3);
-  uint8_t d4 = get_clock_digit(time_now, 4);
-  esphome::Color c3_top = PALETTE[d3];
-  esphome::Color c3_bot = PALETTE[(d3 + 1) % 10];
-  esphome::Color c4_top = PALETTE[d4];
-  esphome::Color c4_bot = PALETTE[(d4 + 1) % 10];
-
-  esphome::Color color_dots_34(
-    (uint8_t)(((int)c3_top.r + (int)c3_bot.r + (int)c4_top.r + (int)c4_bot.r) / 4 * brightness),
-    (uint8_t)(((int)c3_top.g + (int)c3_bot.g + (int)c4_top.g + (int)c4_bot.g) / 4 * brightness),
-    (uint8_t)(((int)c3_top.b + (int)c3_bot.b + (int)c4_top.b + (int)c4_bot.b) / 4 * brightness)
-  );
-
-  res[2] = color_dots_34;
-  res[3] = color_dots_34;
+  for (size_t i = 0; i < NUM_DOTS; i++) {
+    res[i] = unified_color;
+  }
 
   return res;
 }
