@@ -9,15 +9,7 @@ esphome:
         - lambda: |-
             nosclock_controller->setup_hardware(id(bus_i2c));
             ESP_LOGI("main", "AW9523 and Shift Registers Initialized");
-    - priority: -100
-      then:
-        - lambda: |-
-            // Align backlight state with clock enabled state after components have restored their states
-            if (id(tubes_light)->remote_values.is_on()) {
-              id(backlight_strip).make_call().set_state(true).perform();
-            } else {
-              id(backlight_strip).make_call().set_state(false).perform();
-            }
+
 
 esp32:
   board: esp32-c3-devkitm-1
@@ -159,10 +151,6 @@ light:
 
 
 sensor:
-  - platform: dallas_temp
-    name: "Temperature"
-    update_interval: 60s
-
   - platform: scd4x
     address: 0x62
     co2:
@@ -189,13 +177,7 @@ binary_sensor:
     id: clock_button
     on_press:
       - lambda: |-
-          if (id(tubes_light)->remote_values.is_on()) {
-            id(tubes_light).make_call().set_state(false).perform();
-            id(backlight_strip).make_call().set_state(false).perform();
-          } else {
-            id(tubes_light).make_call().set_state(true).perform();
-            id(backlight_strip).make_call().set_state(true).perform();
-          }
+          nosclock_controller->toggle_clock();
 
   - platform: template
     name: "High CO2 Alert"

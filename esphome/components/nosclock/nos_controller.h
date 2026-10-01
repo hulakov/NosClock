@@ -42,6 +42,10 @@ class NosController : public esphome::Component {
        esphome::output::FloatOutput *tubes_en
    );
 
+   void set_clock_enabled(bool enabled) { m_clock_enabled = enabled; }
+   bool is_clock_enabled() const { return m_clock_enabled; }
+   void toggle_clock() { m_clock_enabled = !m_clock_enabled; }
+
  private:
    INosEffect &resolve_effect(const std::string &effect_name);
    void update_backlight(esphome::light::AddressableLight *addressable, esphome::light::LightColorValues color_values, esphome::ESPTime time_now, INosEffect &active_effect);
@@ -56,6 +60,8 @@ class NosController : public esphome::Component {
    ScannerDualEffect m_scanner_dual_effect;
    ScannerSplitEffect m_scanner_split_effect;
    SolidEffect m_cycle_effect{true, true};
+
+   bool m_clock_enabled{true};
 };
 
 } // namespace nosclock

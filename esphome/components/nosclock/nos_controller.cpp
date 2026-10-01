@@ -120,10 +120,10 @@ void NosController::update_clock(
     esphome::light::LightState *backlight_strip,
     esphome::output::FloatOutput *tubes_en
 ) {
-  bool enabled = false;
+  bool enabled = m_clock_enabled;
   float tubes_brightness = 0.0f;
   if (tubes_light != nullptr) {
-    enabled = tubes_light->current_values.is_on();
+    enabled = enabled && tubes_light->current_values.is_on();
     tubes_brightness = tubes_light->current_values.get_brightness();
   }
 
@@ -142,6 +142,10 @@ void NosController::update_clock(
     if (!active_effect_name.empty() && active_effect_name != "None") {
       effect_name = active_effect_name;
     }
+  }
+
+  if (!m_clock_enabled) {
+    color_values.set_state(false);
   }
 
   INosEffect &active_effect = resolve_effect(effect_name);
