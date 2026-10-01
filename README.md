@@ -180,7 +180,7 @@ The [interactive BOM](hardware/bom/ibom.html) shows where each part goes on the 
 
 ### Step 4 — 3D-print the enclosure
 
-1. Download the STL files from the [`enclosure/`](enclosure/) folder.
+1. Download the STL files from the [`enclosure/`](enclosure/) folder ([online preview](https://a360.co/4aOHyom)).
 2. Print them with **PLA** or **PETG**. A 0.2 mm layer height works well.
 3. Put the soldered board with the tubes into the enclosure.
 
