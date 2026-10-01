@@ -16,6 +16,19 @@
 
 namespace nosclock {
 
+// Calibrated hardware output limits (1% -> min, 100% -> max)
+static constexpr float BACKLIGHT_MIN_RAW = 10.0f;
+static constexpr float BACKLIGHT_MAX_RAW = 255.0f;
+
+static constexpr float DOTS_R_MIN_RAW = 1.0f;
+static constexpr float DOTS_R_MAX_RAW = 6.0f;
+
+static constexpr float DOTS_G_MIN_RAW = 1.0f;
+static constexpr float DOTS_G_MAX_RAW = 4.0f;
+
+static constexpr float DOTS_B_MIN_RAW = 1.0f;
+static constexpr float DOTS_B_MAX_RAW = 7.0f;
+
 class NosController : public esphome::Component {
  public:
    void setup() override;

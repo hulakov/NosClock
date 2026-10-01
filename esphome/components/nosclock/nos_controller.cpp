@@ -51,7 +51,15 @@ void NosController::update_backlight(esphome::light::AddressableLight *addressab
     std::array<ColorFloat, NUM_LEDS> raw_colors = active_effect.apply_backlight(time_now, pure_user_color);
     for (size_t i = 0; i < raw_colors.size(); i++) {
       if (i < addressable->size()) {
-        esphome::Color final_color = raw_colors[i].to_color(user_brightness);
+        float r_norm = raw_colors[i].r * user_brightness;
+        float g_norm = raw_colors[i].g * user_brightness;
+        float b_norm = raw_colors[i].b * user_brightness;
+
+        uint8_t r_out = (r_norm > 0.001f) ? (uint8_t) std::round(BACKLIGHT_MIN_RAW + r_norm * (BACKLIGHT_MAX_RAW - BACKLIGHT_MIN_RAW)) : 0;
+        uint8_t g_out = (g_norm > 0.001f) ? (uint8_t) std::round(BACKLIGHT_MIN_RAW + g_norm * (BACKLIGHT_MAX_RAW - BACKLIGHT_MIN_RAW)) : 0;
+        uint8_t b_out = (b_norm > 0.001f) ? (uint8_t) std::round(BACKLIGHT_MIN_RAW + b_norm * (BACKLIGHT_MAX_RAW - BACKLIGHT_MIN_RAW)) : 0;
+
+        esphome::Color final_color(r_out, g_out, b_out);
         if ((*addressable)[i].get() != final_color) {
           (*addressable)[i] = final_color;
           changed = true;
@@ -83,7 +91,6 @@ void NosController::update_dots(esphome::light::LightColorValues dots_color_valu
   }
 
   float user_brightness = dots_color_values.get_brightness();
-  float dots_combined_factor = user_brightness * DOTS_BRIGHTNESS_LIMIT;
 
   ColorFloat pure_user_color(
     dots_color_values.get_red(),
@@ -94,7 +101,15 @@ void NosController::update_dots(esphome::light::LightColorValues dots_color_valu
   dots = active_effect.apply_dots(time_now, pure_user_color);
 
   for (size_t i = 0; i < dots.size(); i++) {
-    esphome::Color final_dot_color = dots[i].to_color(dots_combined_factor);
+    float r_norm = dots[i].r * user_brightness;
+    float g_norm = dots[i].g * user_brightness;
+    float b_norm = dots[i].b * user_brightness;
+
+    uint8_t r_out = (r_norm > 0.001f) ? (uint8_t) std::round(DOTS_R_MIN_RAW + r_norm * (DOTS_R_MAX_RAW - DOTS_R_MIN_RAW)) : 0;
+    uint8_t g_out = (g_norm > 0.001f) ? (uint8_t) std::round(DOTS_G_MIN_RAW + g_norm * (DOTS_G_MAX_RAW - DOTS_G_MIN_RAW)) : 0;
+    uint8_t b_out = (b_norm > 0.001f) ? (uint8_t) std::round(DOTS_B_MIN_RAW + b_norm * (DOTS_B_MAX_RAW - DOTS_B_MIN_RAW)) : 0;
+
+    esphome::Color final_dot_color(r_out, g_out, b_out);
     m_aw9523.set_dot_color(i, final_dot_color);
   }
 }
